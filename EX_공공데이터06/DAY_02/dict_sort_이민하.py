@@ -33,17 +33,17 @@ while True:
         for i in range(len(state_list)):
             print(f"[{i + 1}] {state_list[i]} : {values_list[i]}")
 
-    if opt == 2:
+    elif opt == 2:
         capital_sorted_list = sorted(state.items(), key = lambda x : x[0])
         for i in range(len(capital_sorted_list)):
             print(f"[{i + 1}] {capital_sorted_list[i][0]:11s} : {capital_sorted_list[i][1][0]:15s}  {capital_sorted_list[i][1][1]:8s}  {capital_sorted_list[i][1][2]:,}")
         
-    if opt == 3:
+    elif opt == 3:
         population_sorted_list = sorted(state.items(), key = lambda x : x[1][2], reverse = True)
         for i in range(len(population_sorted_list)):
             print(f"[{i + 1}] {population_sorted_list[i][0]:11s} :  {population_sorted_list[i][1][2]:,}")
 
-    if opt == 4:
+    elif opt == 4:
         capital = input("출력할 도시 이름을 입력하세요 : ")
         result = state.get(capital, f"도시이름 : {capital}은 key에 없습니다.")
         if len(result) == 3:
@@ -52,7 +52,7 @@ while True:
         else:
             print(result)
 
-    if opt == 5:
+    elif opt == 5:
         population_sum = 0
         continent = input("대륙 이름을 입력하세요(Asia, Europe, America) : ")
         for i in range(len(state_list)):
@@ -61,6 +61,6 @@ while True:
                 print(f"{state_list[i]}: {values_list[i][2]:,}")
         print(f"{continent} 전체 인구수: {population_sum:,}")
 
-    if opt == 6:
+    elif opt == 6:
         print("프로그램을 종료합니다.")
         break
