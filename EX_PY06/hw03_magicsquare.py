@@ -24,7 +24,7 @@ def start(size, square):
 def move(square, row, col, num, size):
     for i in range(size * size - 1):
         num += 1
-        if (row - 1 == -1 and col + 1) >= size:
+        if (row - 1 == -1 and col + 1 >= size):
             square[row + 1][col] = num
             row += 1
 
@@ -66,6 +66,7 @@ def main():
     magic_square = make_square(size)
     square, row, col, num = start(size, magic_square)
     magic_square = move(square, row, col, num, size)
+    print(f"Magic Square ({size}x{size})")
     for i in range(size):
         for j in range(size):
             print("{:3d}".format(magic_square[i][j]), end = "")
