@@ -9,7 +9,7 @@ def load_csv(file_name):
 
 def search_store(area, data):
     for i in range(len(area)):
-        data = data[(data['주소'].apply(lambda x : area[i] in x)) & (data['주소'].apply(lambda x : x.find(area[i])) < 9)]
+        data = data[(data['지역'].apply(lambda x : area[i] in x))]
     
     return data
 
