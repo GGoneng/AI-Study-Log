@@ -1,0 +1,610 @@
+Bio
+Education:
+PhD in statisticsBio
+No bio yet...
+
+Quietly working awayBio
+def getinfo():
+print(Name= "Meet Nagadia", University: "AURO University", Course: "MSc AI", Location:" India")
+getinfo()Bio
+At Khulna University of Engineering & Technology, where I am completing my 4th year in Electrical and Electronic
+In engineering, I have learned the importance of applying classical strategies to modern-day projects. I am a self-learned Python
+developer and Machine Learning ambitious with proven and tested coding, computing, and communication skills.Bio
+Submitting daily predictions to Numerai, Numerai Signals, and Microprediction; submitting weekly predictions to the DataCrunch competition, and competing in the ADIA Lab Market Prediction Competition, both hosted by CrunchDAO. Ex-Quantopian licensor (8 in total).
+Rig
+CPU: 2nd gen TR 2990wx (32 cores, 64 threads)
+GPU: 2x RTX 3090 with NVLink
+RAM: 128GB
+簡単な日本語だと了解できます。よろしくお願いいたします。Bio
+Salutations! Be a data scientist. Data patterns intrigued me to pursue data science.
+Due to my wide academic background, I am well-versed in mathematics, statistics, and computer science. My schooling has taught me to analyze and solve complex challenges creatively.
+I've decided to become a data scientist since I'm fascinated by data. Finding meaningful insights in raw data and turning them into practical solutions that make a difference fascinates me.
+My skills include data cleansing, exploratory data analysis, and machine learning. Making great Python and R models and algorithms utilizing pandas, NumPy, scikit-learn, and TensorFlow.
+I practice data problems in projects. I investigate predictive modeling and NLP.
+I appreciate learning and teamwork. I like learning from data geeks and experts, working on exciting projects, and increasing the data science community.
+Future goals: As a novice data scientist, my ultimate goal is to make a positive impact by leveraging data science to solve real-world problems. I aspire to work on projects that contribute to domains such as environmental issues, business sustainability, or social impact, where data-driven insights can drive meaningful change.
+I appreciate discussing opportunities, collaborations, and info. I am a passionate data scientist with intriguing projects. I would love to connect with you. Let’s explore the endless possibilities that data holds together!
+Data scientists use machine learning, data-driven judgments, and motivated pupils.
+expand_more
+View MoreBio
+Want to chat? join kaggle discord and find me there - discord.gg/kaggleBio
+Earned a BA in mathematics then worked as a graphic artist, photographer, carpenter, and teacher. Earned a PhD in computational science and mathematics with a thesis on optimizing parallel processing. Now work as a data scientist and researcher.Bio
+No bio yet...
+
+Quietly working awayBio
+I'm a data scientist have skills in Python programming language, machine learning, deep learning, NLP, data visualization and presentationBio
+"Mohammad Ghiasvand, an architectural engineering graduate and project management master, adept in architectural principles and construction, with expertise in management, sales, and marketing. Currently delving into the realms of artificial intelligence, including data science, machine learning, and deep learning. Thrilled to be part of your vast Kaggle community, constantly seeking knowledge and contributing to the ever-evolving world of AI. Building a bridge between architecture and AI for a future of innovative solutions.Bio
+Hi! I'm one of the Data Scientists here at Kaggle. I do a lot things, including creating fun & informative data science content.
+My background (and PhD) is in Linguistics and in particular Computational Sociolinguistics. I'm very excited about linguistic data, and have quite a bit of experience with both speech and text data. I'm a big fan of R (especially the Tidyverse) but use Python as well.BioBio
+Computer engineering student at Thapar University,
+Dedicated to Optimizing data for meaningful impact. From algorithms to insights, I explore Kaggle's arena, blending theory with real-world applications to unravel the secrets hidden within the data cosmos🌌.Bio
+I am a researcher in Nuclear and Particle Physics, with more than ten years of experience in the field. My articles can be found at: https://inspirehep.net/authors/1259440.
+I am also very interested in Data Science, Machine Learning and some of their applications, with the hope that this may open the doors to new job opportunities.Bio
+I teach deep learning, reinforcement learning, game AI, real-time 3D, and machine learning at Northeastern University. I have taught computer science, statistics, applied mathematics, programming, 3D visual effects, web programming, server administration, networking, and game programming at Northeastern University, UCLA, Santa Monica College, ITT, and the Art Institutes - Hollywood. My PhD was in computer science from UCLA. My major field was computational, and systems biology and my minor fields were artificial intelligence and statistics. I am a founding partner and advisor NEU AI Skunkworks, a master's students research group of over 500 students.Bio
+No bio yet...
+
+Quietly working awayBio
+"As a passionate 3rd-year B.Tech CSE A.I. & Machine Learning student, I'm driven by a profound interest in the world of Data Science, Artificial Intelligence, and Machine Learning. Proficient in Python and Data Structures & Algorithms, my journey has led me to embark on several impactful Data Science projects, fueled by my insatiable curiosity and determination to harness the power of data for real-world applications. With additional skills in C and C++, I'm poised to take on new challenges and contribute to innovative solutions. I'm always on the lookout for fresh opportunities and committed to a continuous journey of learning and growth"BioBio
+Hi, I am Kaggle Competitions Grandmaster :)Bio
+Simple. But not too simple.Bio
+Actively seeking for remote internship opportunities in Data ScienceBio
+Learning and applying..Bio
+Experience: Computer Vision R&D Engineer.
+https://www.linkedin.com/in/cher-keng-heng-a3316154Bio
+🔭 I’m currently studying at SWUFE
+🌱 I’m currently learning Artificial Intelligence and Finance
+❓ Ask me about anything related to Machine Learning
+⚡ Life is short, you need PythonBio
+No bio yet...
+
+Quietly working awayBio
+Machine Learning Specialization from Stanford
+Studying Data Science, AI and ML
+Data Analytics and AI ResearchBio
+Z by HP Data Science Global Ambassador
+On the highway to becoming a Data Science Master. 💪
+I don't discriminate: I love Python, R, Machine Learning, Deep Learning, pretty visualisations, clean notebooks and everything in between. 🤍
+Specs: ZBook Studio G9 | 2 x NVIDIA A6000 | lots of passionBio
+No bio yet...
+
+Quietly working awayBio
+No bio yet...
+
+Quietly working awayBio
+Hello! I'm Abhijit Dahatonde, a recent graduate in BSc Computer Science, aspiring to become a successful data scientist or data analyst. With a strong background in computer science and a passion for leveraging data, I aim to uncover valuable insights and contribute to data-driven decision-making. Proficient in Python and SQL, I am equipped with the necessary tools to manipulate and analyze data effectively. I'm eager to collaborate and connect with fellow data enthusiasts on this exciting journey.Bio
+I've the proficiency to use Machine Learning, Natural Language Processing, Deep Learning and deploy model on various Cloud Platform such as Google Cloud Platform, Microsoft Azure and others. Also, I'm interested in Artificial Intelligence. I'm looking to continue my career path in a dynamic and innovative culture to earn dexterous money with my profession. I'm willing to make carrier in Data Science.
+GitHubBio
+No bio yet...
+
+Quietly working awayBio
+.
+Nancy is, Ph.D. candidate in Accounting with nearly 12 years experience working in Bank on operational & extracting data, And now she is working in AI, ML, DL, DS fields
+Currently, she is pursuing a Ph.D. Accounting at the World Islamic Sciences and Education University, further solidifying her expertise in the financial domain. After, she successfully completed her first master's and bachelor's degree programs in accounting.
+Concurrently, she is also engaged in her second master's degree program, in Cyber Security, which she is studying at Irbid University. after being done with her second bachelor's degree program, Information Technology and Computing, which she took at the Arab Open University.
+In addition to her financial and computing pursuits, she is also working on her third educational journey, obtaining a diploma in Medical Laboratory studies from a reputable college.
+expand_more
+View MoreBio
+No bio yet...
+
+Quietly working awayBio
+I am a final year undergraduate at IIT Roorkee. My interests include software engineering, theatre, writing and data science.Bio
+Hello Kaggle friends.
+My name is Al Fath Terry.
+I'm a stats-obsessed analyst by day, and a Rubik's cube fiend by night (okay, sometimes during work hours too).
+Apart from that, teaching is another passion of mine, I believe that knowledge should be shared and grown.
+I'm excited to share my skills and experiences with this community, and I look forward to learning from others as well.
+Let's solve some puzzles… I mean, datasets together!Bio
+No bio yet...
+
+Quietly working awayBio
+🚀 Data Scientist Specialist | IBM Certified
+Hey there!
+I'm Fahad Rehman, a passionate data scientist driven by my love for machine learning and analytics. With a background in computer science, I bring a unique perspective to the field. I'm enthusiastic about sharing insights through my blog and eager to learn and collaborate within the Kaggle community. Let's connect and dive into exciting data science journeys together!Bio
+Twenty two years of experience leading large scale global Data Warehousing and Analytics projects. Expertise in design and implementation of scalable, highly available big data solutions on AWS using Amazon EMR. Defined Technology Strategy and Architecture for multiple Business Intelligence programs. Demonstrated experience Implementing Multi Tera byte Data Warehousing Solutions. Designed ETL and Reporting frame work to cater Enterprise needs.Bio
+Coder | Data Scientist | Consultant | CTO - TheaTech
+For more details and cooperation -->
+MAIL:
+brisdncer@protonmail.com
+brisdncer@gmail.com
+baris.dincer@theatech.io
+LinkedIn:
+https://www.linkedin.com/in/brs-dincer/Bio
+Survived PhD in Computational Electromagnetics, while working as a researcher, applied 20 years ago what will be called now Machine Learning to solve ill-posed inverse problems in NDT, worked for long time in Software Development, even for a while as a Project Manager, started few years ago to dive into Data Science, currently working as a Data Scientist at Endava.Bio
+Cat in the Arena
+It's not the hyperparameter-tuning critic who matters, but the cat deep in the Kaggle fray. With matted fur and code mishaps, this cat tries, errs, and experiments wildly. Some see success, others failure, but at least the cat dares. Unlike those who merely overfit without risking a byte.Bio
+Completed BS, MS and currently PhD candidate for Deep Learning Research, while having more than 16-years of Experience in R&D related to Computer Visions/Signal Processing/Business Intelligence.
+As, many friends of all world get in touch with me to ask for tips to learn or get a vacant job in the area of data science, so I decided to write this text to have something a bit more “structured” and contribute in the better way with people who are in the beginning of this journey. And would like to Welcome you in Data Science Community, throughout country/Pakistan.Bio
+No bio yet...
+
+Quietly working awayBio
+No bio yet...
+
+Quietly working awayBio
+Everything between Philosophy and Augmented RealityBio
+👨‍💻 Meet Jai: Bridging the Digital Realm
+Hello, tech enthusiasts! I'm Jai, a passionate Computer Engineering on a quest to unravel the endless possibilities at the intersection of technology and innovation.
+🚀 Tech Maven:
+My journey into the digital realm has equipped me with a diverse skill set. From mastering the intricacies of machine learning and deep learning to harnessing the power of cloud computing, I thrive on transforming cutting-edge concepts into tangible solutions.
+💡 Inquisitive Mindset:
+As a perpetual learner, I'm fueled by curiosity. My academic pursuits and hands-on experiences have delved into the realms of artificial intelligence, where I explore the algorithms that shape intelligent systems.
+🌐 Web Development Virtuoso:
+With a knack for crafting seamless user experiences, I venture into the world of web development. From front-end finesse to back-end robustness, I believe in creating digital landscapes that not only function flawlessly but also captivate users.
+
+
+
+expand_more
+View MoreBio
+Spider-Man DuckBio
+No bio yet...
+
+Quietly working awayBio
+Data Science and Machine Learning Enthusiast 💯
+[Linkedin] [Github] [Website]
+Currently working as an Executive Data Scientist at NielsenIQ. 👍
+Skills ✔️
+Java, Python, JavaScript
+Data Science, Machine Learning, Deep Learning, Web Development
+MS Excel, SQL, AWS, PowerBI, Tableau, Heroku, Git, Mardown, Linux
+Communication, Creativity, Problem-Solving, Leadership, Adaptability, Decision-making, Teamwork
+Feel Free to contact me. 😃Bio
+Building ML @ H2O.ai
+Post-graduate in Applied Statistics from IIT-Bombay
+Author of DatatableTon, JaxTon and WaveTon
+9-time Indian Sudoku Champion
+5-time Indian Puzzle Champion
+4-time Times of India Sudoku Champion
+Silver-medalist at Asian Sudoku Championship
+You v YouTube quiz show winner
+Holder of two Guinness World Records
+MensanBio
+I am very interested in programming and I like working with data, that's why I got acquainted with machine learning and data science.
+I also do web design with front end.
+Of course, I am still learning and I enjoy these learningsBio
+Here to learn and improve data science and Machine learning acumen.
+Kaggle Certificates
+1. Intro to Programming
+2. Python
+3. Data Cleaning
+expand_more
+View MoreBio
+No bio yet...
+
+Quietly working awayBio
+No bio yet...
+
+Quietly working awayBio
+"The goal is to turn data into information, and information into insight." - Carly Fiorina
+"Hello, I am a data scientist with a solid foundation in mathematics and extensive experience in data science and machine learning. I graduated with a Bachelor's Degree in Mathematics from the University of Southeastern Philippines, Davao City. Additionally, I have pursued further learning through various online courses to enhance my skills. These include the Data Science Professional Certificate at Harvard University, the PCAP: Programming Essentials in Python Intermediate course at CISCO Networking Academy, the DPhi Data Science Bootcamp, and the Machine Learning Engineering Course at MLzoomcamp2022."Bio
+I write about stuff I find interesting! https://medium.com/@ulriktpedersen
+Designing and implementing Machine Learning solutions to help improve the world through data. Boost business, grow revenue and improve efficiency through data-driven decision making 📊🚀.
+Python/Rust Data Science specialising in Machine Learning and MLOps, certified with and working in Microsoft Azure Machine Learning Studio 🤖.
+Skills:
+I have experience doing analysis, modelling and visualisation using Python 🐍 and Rust 🦀. Implementing and running (CD/CI) Machine Learning DevOps pipelines in Azure.
+Tech Stack:
+Python Data Science (SciKit-Learn, TensorFlow, SciPy 🐍), Rust Machine Learning (Linfa 🦀), anything dataframe (pandas, polars 🐼) and anything/everything Azure Machine Learning (Azure ML SDKv2 🧪).Bio
+SOHOT TOOMUCHBio
+Hi there! I'm Nandhana Suresh , a data enthusiast who loves participating in Kaggle competitions. I have a keen interest in machine learning and statistics, and I'm always eager to learn more and improve my skills. I'm excited to be part of the Kaggle community and connect with other data scientists. Let's work together and achieve great things in the field of data science!Bio
+🚀 Welcome to My World 🌍
+About Me
+👨‍💻I work as a Data engineer at Techlogix, specializing in artificial intelligence. Over the last two years, I've explored and practiced machine learning and deep learning in various projects. Additionally, I have been a Kaggle expert three times.
+📊In my role as a data analyst, I'm passionate about developing reports, dashboards, and performance-related insights. I excel at mapping business requirements and translating them into meaningful insights. I have a strong understanding of advanced data analytics, including SQL, Google Sheets, and Excel, enabling effective data cleaning and prediction. I am skilled in communication, data analysis, and problem-solving.
+🏏🏓In my free time, I enjoy playing cricket and table tennis.
+Projects
+✅ Face Recognition Student Attendance System in Python FaceNet+Kairos With Tkinter GUI & Mysql
+
+expand_more
+View MoreBio
+No bio yet...
+
+Quietly working awayBio
+Hi everyone 👋, I'm Krishna
+An AI Enthusiast and a former Kaggle Master
+#DataScience #ArtificialIntelligenceBio
+Hi
+(You are looking for - https://shivance.github.io)Bio
+I am here in Kaggle to exercise my Brain .
+Chief Data Scientist | Polymath | Ambassador at AIMed |Autism Advocate |Founder of NeuroAI (https://humansofdata.atlan.com/2019/08/unravel-the-mystery-of-the-human-brain-at-neuroai/)
+Neurodiversity India Summit
+http://neuroaiworld.com/neurodiversity-india-summit-2021/
+Twitter : https://twitter.com/URengarajuBio
+No bio yet...
+
+Quietly working awayBio
+I'm a Computer Science & Engineering (CSE) Graduate from Rajshahi University of Engineering & Technology (RUET), passionate about Data Science, Machine Learning, Deep Learning and Computer Vision. Also, have experience in Web Development, Android Development and Game Development. I'm a passionate learner who's always willing to learn and work across technologies and domains. I love to explore new technologies and leverage them to solve real-life problems. Apart from that I also love to guide and mentor newbies.
+Kaggle Timeline
+December 24,2022 - Became Notebook Grandmaster[105th Grandmaster]
+December 3,2022 - Became Dataset Master[63rd Master]
+October 2,2022 - Became Notebook Master
+September 28,2022 - Became Dataset Expert
+July 22,2022 - Became Notebook Expert
+July 8,2022 - Became Discussion Expert
+July 2,2022 - Started Kaggling Actively
+expand_more
+View MoreBio
+Hello kagglers,
+I'm a recent graduate pursuing Data Analytics, always up for collaborations,
+Check out my projects, I value feedbacks & suggestions immensely :)
+Quality > QuantityBio
+My name is Mohammad Reza Momeni. I've been working in the field of machine learning and deep learning for 6 years. During this time, I did not have an online resume in this field until I realized the importance of activity in the Kaggle community. That's why I want to share my experiences and notebooks here. Kaggle helps me grow and be more motivated in this field and It's my pleasure to be a part of this community.
+I would appreciate it if you follow me so that we can use each other's experiences more.💯Bio
+Hello, I'm hsling, a student alchemist 🧙‍♂️ who loves machine learning ❤️. Day after day on campus 🏫, using algorithms to turn data into treasure 💎, and at night 🌙, in addition to learning and debugging code 💻, I also dream of using deep learning to predict the questions of the final exam 📚🤖. But at the moment, my model is better at predicting when the school coffee machine needs to be repaired ☕️🔧!BioBio
+About Me:
+Data Analyst
+Background:
+Aerospace Engineering from Tohoku University
+My interests on Kaggle:
+Learn new things
+Creating Machine Learning Models
+Exploratory Data Analyses (EDA)
+Neural Networks / Deep Learning w/ PyTorch
+Bioinformatics
+Natural Language Processing
+expand_more
+View MoreBio
+No bio yet...
+
+Quietly working awayBio
+No bio yet...
+
+Quietly working awayBio
+Working to improve competitiveness of Olist Operations through optimisation of freight prices, routes and seller operations. Looking at the amount of risk taken by the company. Implementing automated processes and creating indicators to keep track of daily operations. Also working to collect data from third parties apps and services and to apply them to make better business decisions.
+My education background is in physics and I have worked for many years at physics and biology laboratories in both Brazil and US. This background gave me deep knowledge about planning, execution and getting feedback from experiments.
+I have experience at sales operations, credit risk modelling and KPIs. Also worked on many automation projects, using Python, SQL and VBA. Have good knowledge of Python and scientific libraries such as Pandas, Scikit and Tensorflow. Familiar with AWS tools. Currently learning Hadoop, Spark and other distributed computing technologies.
+I also created Polyteck, a free science and technology magazine for college students. We have published 18 issues. From 2013 to 2016, 200 thousand copies were distributed to students of more than 88 different universities in Brazil.Bio
+First and only Datasets Grandmaster in Telangana as of April 2024
+One of the only 16 Datasets Grandmasters in India as of April 2024
+One of the only 59 Datasets Grandmasters in the World as of April 2024
+One of the Youngest Kaggle Grandmasters.Bio
+My name is Ahmad Rafiee. I have worked in ML field since 2021. Due to be interacted with AI programmers, I decided to joint Kaggle community that cause me so happy.
+Here are my skills:
+ML / MySQL / FlaskBio
+No bio yet...
+
+Quietly working awayBio
+I am an aspiring Data Analyst with individual experience in Python, SQL, and Tableau, Arc GIS, Arc FM.
+I have 9+ industrial experience in BSES Rajdhani Power LTD , Distribution Utility Sector I gained a strong knowledge of Python ,SQL, Arc GIS , Arc FM, Model Builder, web scrapping, forecasting, data visualization, Data quality assessment, dashboards, Here I have worked as a team lead.
+I am a Data Enthusiast, Playing with Huge Datasets in Our Organization That is Utility Based Industry.
+I have completed IBM Data Science Professional Course. I have performed many projects related to data science methodology, python, databases, SQL, data analysis, data visualization, and machine learning during my course tenure.Bio
+Howdy!
+I'm a computer user and I find bioinformatics and machine learning agreeable. I work at a non-profit, I'm a military veteran, and I like helping people.
+My favorite things are:
+cats
+gifs
+pizza
+crunchy tacos
+chainsaws
+Fun facts -- and only one of these is true:
+I brew beer
+Pennywise is my favorite band
+
+
+
+expand_more
+View MoreBio
+👋 Hi there! I'm Anthony, a passionate data scientist and a proud Master's student in Data Science at the University of Boulder. 🎓
+🐍 Professionally, I specialize in Python, leveraging its power to develop and maintain sophisticated data models. My expertise shines in using FastAPI, which I deploy professionally to build efficient, scalable APIs. This skill is a cornerstone of my work, enabling me to bridge the gap between raw data and actionable insights with exceptional proficiency. 🚀
+At work, I'm deeply involved in the full lifecycle of model development. This journey encompasses everything from initial conception and data preprocessing to model training, evaluation, and deployment. I take pride in my ability to translate complex data into functional, user-friendly applications, ensuring that the end-users can easily navigate and benefit from the intricate models I build.
+🤖 Outside of work, I enjoy contributing to various data science projects and challenges on Kaggle. This platform is a fantastic resource that allows me to refine my skills, learn from the community, and stay abreast of the latest trends in data science.
+🔍 I'm always open to collaborating on interesting projects, especially those involving machine learning, advanced API development, or any innovative use of data. If you're interested in connecting or discussing potential collaborations, feel free to reach out!
+expand_more
+View MoreBio
+No bio yet...
+
+Quietly working awayBio
+No bio yet...
+
+Quietly working awayBio
+MURAT KOKLU was born in Konya, TURKEY in 1979. He received B.Sc. degrees in Computer System Teaching in 2002 and Computer Engineering in 2019 from the Selcuk University. He received M.Sc. and Ph.D. degrees from Selcuk University, Departments of Electronics and Computer Sciences, and Computer Engineering, in 2005 and 2014 respectively. He has been working as an Assistant Professor in the Department of Computer Engineering at Selcuk University. His current research interests include image processing, data mining and artificial intelligence.
+CV: https://www.muratkoklu.com/en/publications
+DATASET: https://www.muratkoklu.com/datasetsBio
+New: "The Orange Book of Machine Learning"
+"Our goal is to find a useful approximation \( \hat{f}(x) \) to the function \( f(x) \) that underlies the predictive relationship between the inputs and the outputs."
+from "The Elements of Statistical Learning" by Trevor Hastie, Robert Tibshirani and Jerome Friedman (2nd Ed. § 2.6)
+
+"All the impressive achievements of deep learning amount to just curve fitting"
+Judea Pearl
+Hosted competitions
+Probabilistic forecasting I: Temperature - Metric: CRPS
+Prediction interval competition I: Birth weight - the first ever Kaggle prediction interval competition. Metric: Winkler interval
+expand_more
+View MoreBio
+Data Scientist at AdvanThink (ISoft)Bio
+Mathematics, Data Science, Bioinformatics
+https://twitter.com/AlexanderC444
+Ph.D. 1999 - Math&MathPhys from Moscow State University
+Academia 1999-2009 Math&MathPhys, in ITEP
+Industry 2009-2020 Data Science, Numerical Algorithms, Signal Processing, Algo-Trading, Risk Management
+Academia from 2020 Data Science, BionformaticsBio
+Hello 👋👋👋
+My Name is Nima !
+I am a computer engineer and an industrial engineer, my favorite field is artificial intelligence.
+For this reason, I work in the fields of machine learning, deep learning, and neural networks.
+I always know myself as a student and I am ready to learn and improve at any moment.
+❤️❤️ Best Wishes! ❤️❤️Bio
+👨‍💻 My LeetCode profile
+👨‍🎓 Bachelor of Economics with strong knowledge in Math:
+(Lineal Algebra, Calculus, Theory of Probability, Mathematical Statistics and other)
+Python Core (4 kyu at Code Wars, top 11%)
+Numpy, Pandas, Matplotlib, Scipy, Seaborn, Scikit-learn
+English B1
+SQL (PostgreSQL)
+HTML 5
+Jira (Scrum)
+
+
+
+
+
+expand_more
+View MoreBio
+I am Sahir Maharaj. As a Data Scientist, AI Engineer, and Machine Learning Specialist, my professional journey is interwoven with continuous learning, collaboration, and innovation. I've had the privilege to collaborate with Fortune 500 companies such as Old Mutual South Africa, BMW, Volkswagen Group, Audi, SAP, and EY. These collaborations have shaped my understanding and allowed me to offer bespoke solutions tailored to the unique challenges each organization faces. Together, we've explored the vast terrains of data, unearthing insights that drive impactful decisions.
+In addition to these corporate associations, I've been fortunate to partner closely with tech leaders like Cisco, Intel, and IBM. Outside of the corporate sphere, I enjoy sharing my thoughts and insights on Medium about the dynamic world of AI. With a monthly readership that's steadily grown to 30k+, it's been a gratifying experience to engage with like-minded professionals and enthusiasts, fostering a community of continuous learning. My contributions have also been recognized by LinkedIn, where I've been able to contribute as a Top Voice in the fields of AI, Data Science, and Machine Learning. On platforms like Topmate.io, I've engaged in numerous projects, each offering its own set of challenges and learnings. With 500+ projects completed, it's the feedback and the shared experiences with clients that I value the most.Bio
+hello ! My name is William I'm here to develop my analytical skills in tools for international use for companies in real problems and as needed and thank you for everything!https://www.linkedin.com/in/willian-oliveira-92591712a/ (url)Bio
+Hi there, I'm Zain Faisal! 👋
+I'm a BS Data Science student at Punjab University, Lahore, Pakistan. I'm proficient in machine learning and deep learning techniques for predictive modeling and pattern recognition.
+🔧 Skills
+🏆 Achievements
+Completed advanced machine learning courses on Youtube and Kaggle, earning certificates of completion.
+Deployed a machine learning model into production using Scikitlearn for real-time predictions, achieving 95% accuracy.
+Compeleted more than 100 hands on practical projects of Data Analysis.Bio
+I am a pursuring a bachelors degree in software engineering at thestudent in quaid-e-awam university of engineering science and technology nawabshah
+COURSES:
+machine learning
+Data Science
+Python For BeginnerBio
+`
+Hi 👋, I'm Mohamed Osama
+
+An AI student with a strong passion for Machine Learning and Computer Vision.
+
+🌱 I’m currently learning Computer Vision and Deep Learning
+📫 How to reach me mo419274@gmail.com
+expand_more
+View MoreBio
+Hello, Kaggle community! 👋
+I'm Samira Ahmadzadeh Shemirani, a passionate Machine Learning practitioner and Data Science enthusiast 🙋‍♀️.
+With a journey that led me to the brink of completing my PhD in Drug Discovery 🧬 using Machine Learning, I'm excited to embark on the next chapter of my life in the world of Postdoc research 😃. My academic voyage started with a Bachelor's in Biomedical Engineering, a field I hold close to my heart. Currently, I'm immersed in an invaluable Machine Learning course known as IMT, and it's been so enlightening that I'm inspired to share my knowledge through the notebooks I create here on Kaggle.
+With over six years of experience in the biomedical industry ⚕️, I bring real-world insights to my work. My Kaggle objectives are clear: to learn, collaborate, share knowledge, participate in thrilling competitions, and build a comprehensive portfolio!
+Beyond data science, you can find me unwinding in natural parks, enjoying long walks with my husband 🏞️, or settling in for movie nights with a big bag of popcorn 🍿.
+Let's connect and learn together 🌱 !
+expand_more
+View MoreBio
+Python📍ML📍NLP📍 DL📍 CV📍NLP📍CV📍GenAI📍Data Science Practioner📍Sports Enthusiast📍Bio
+Hello WorldBio
+As a Data Scientist with an MSc from Cardiff Metropolitan University, I'm fervently passionate about the real-world applications of Machine Learning, Neural Networks, and Social Media Analytics. I thrive on crafting novel equations grounded in hypothesis and statistics. While Python is my primary playground, I'm also adept with R. My journey intertwines 15,000 hours of tutoring in Maths and Physics, specializing in GCE/GCSE, OL, and AL exams under the Edexcel and Cambridge UK syllabuses. A foundation in Aviation Studies from the University of Kingston and a BA in Business Administration from the University of Bedfordshire have enriched my analytical and problem-solving abilities. As an Education Consultant, I seamlessly bridge the academic and practical worlds, ensuring a holistic understanding of data science's transformative power.Bio
+Developer at Kaggle, making datasets great.Bio
+If you are interested in learning how to collect high-quality datasets for various ML tasks and the overall importance of data in the ML ecosystem, consider reading my book Sculpting Data for ML.Bio
+Here for the articles.Bio
+No bio yet...
+
+Quietly working awayBio
+Hello, I'm Muzammil Baloch, a final-year B.E. student deeply passionate about data. With a remarkable CGPA of 9.14, I've garnered valuable hands-on experience through internship at CodeClause and achieving the title of Kaggle 3x expert. Certified proficient in Python, SQL, Excel, and Power BI, I excel in transforming raw data into actionable insights. Specializing in developing machine learning-driven applications and crafting insightful data visualizations, I thrive on simplifying complex information into strategic solutions.Bio
+Hi 👋, I'm Kerem Karayagiz
+I am sharing my projects on github and I am trying to develop myself in python
+📫 How to reach me keremkarayagiz0@gmail.comBio
+No bio yet...
+
+Quietly working awayBio
+You clearly don't know who you're talking to, so let me clue you in. I am not in danger. I am the danger. I am the one who knocks!Bio
+Master of artificial IntelligenceBio
+Machine Learning and Data Science.
+if you want to access the dataset and files then I have upload on link : https://github.com/Ayushparwal
+Check more work like WEB Development and Data Science in the GitHub.Bio
+👋 Hey there, I'm Amirreza Lotfi, a data scientist with a flair for turning data into stories. 📊📚
+💼 As a data scientist , I enjoy diving into messy datasets, uncovering hidden patterns, and creating predictive models that make an impact.
+🌟 Beyond my role, I'm thrilled to give back to the community as a mentor. Guiding aspiring data enthusiasts to navigate the world of data science is my passion. Let's learn and grow together!
+📊 My expertise includes data cleaning, exploratory analysis, and model development using Python. I am currently improving my skills in NLP
+🌐 Outside of data, I love some sports like soccer, volleyball , etc. And I am interested in other areas of artificial intelligence and programming such as image processing and backend development. Balancing diverse interests fuels my creativity and problem-solving skills.
+📚 Let's connect! Whether you're just starting or looking to advance in your data journey, I'm here to offer guidance, insights, and a helping hand. Feel free to reach out anytime.Bio
+No bio yet...
+
+Quietly working awayBio
+No bio yet...
+
+Quietly working awayBio
+I am an Engineer (Electronics) from DJ Sanghvi College of Engineering, Mumbai, MBA- Finance from NMIMS, Mumbai with Dean's list accreditation, CFA, FRM and CAIA Charter-holder and a Certified Fitness Trainer from K11 School of Fitness Sciences and an Orthopedic Specialist Trainer from American Council of Exercise and a CPR-AED certificate holder. I currently work in Data Science- Risk Management at Emirates NBD Central Risk Unit as a model developer for Credit Risk use-cases, including IFRS9, ICAAP, Stress Testing and Retail Credit Policy and Underwriting. I was previously a data scientist at Commercial Bank of Dubai- Business Intelligence Competency Centre with contribution in machine learning models for customer acquisition, cross-sell, up-sell and churn prevention use-cases. I also have experience in data engineering, EDW design, Microsoft Dynamics CRM Lead Management framework from my previous employer.
+I have keen interest in computer programming, machine learning, risk management, orthopaedics and fitness training. I am a Man United fan, distance runner and an avid powerlifter as well.Bio
+No bio yet...
+
+Quietly working awayBio
+Data is not only my job, but above all my passion!
+I invite you to look at my projects 😊Bio
+Passionate about data science & AIBio
+Chemical Engineer /
+Programmer /
+Trader /
+Machine Learning /
+Deep LearningBio
+No bio yet...
+
+Quietly working awayBio
+No bio yet...
+
+Quietly working awayBio
+No bio yet...
+
+Quietly working awayBio
+No bio yet...
+
+Quietly working awayBio
+Hi there! I'm a 20-year-old. My main interests lie in the fields of Data Science and Machine Learning, which is why I'm studying Computer Engineering at Mansoura University.
+Technologies 💻
+Programming languages
+expand_more
+View MoreBio
+Follower of Christ, lover of programming, and musician. God blessed me and I know how to play on musical instruments and code, I thank God that he blesses me in all I do. I love that he protects me from any danger or anything that might harm. I would be insanely happy if everyone on Kaggle believes in his magnificient name, he wants that, because he doesn't want people to die in hell, but he wants everybody to live in heaven with him forever. But sin is a problem, as it is written
+"For all have sinned and fallen short of the Glory of God." Romans 3:23
+And also,
+"For the wages of sin, is death, but the gift of God, eternal life in Jesus Christ, our Lord." Romans 6:23
+You might ask, "Why should God be doing all this for us?" Well the answer is:
+"For God so loved the world that he sent his only begotten Son that whoever believes in him, won't perish, but will have eternal life." John 3:16
+He loved us, those who sin against his name and blaspheme his holy dwelling. He gives everybody the way to life, through faith in Jesus Christ, as it is written:
+"And there is salvation in no one else, for there is no other name under heaven given among men by which we must be saved." Acts 4:12
+So I hope that you who are reading this, will believe, and when the last days come, and when we will be taken of this earth, we will meet in heaven and praise our Savior, Jesus Christ.
+expand_more
+View MoreBio
+No bio yet...
+
+Quietly working awayBio
+I am and will always be a learner with interest in Data Science to solve community problems.Bio
+No bio yet...
+
+Quietly working awayBio
+Darien Schettler is a Staff Machine Learning Engineer & Researcher.
+Darien has two degrees, one in Biological Sciences and one in Systems Engineering.
+Darien leverages state-of-the-art machine learning algorithms and tools to solve cutting-edge Machine Learning and Deep Learning problems. Recently Darien has shifted focus towards Multimodal Modelling and Natural Language Understanding (Generative AI too), however, he comes from a strong background in Computer Vision (particularly in Health Care and Biological Science fields).
+Darien Schettler is currently working at VMWare (Broadcom)Bio
+TrainingData - Company that provides data classification, annotation, and content moderation.
+For more rich datasets visit our site: https://trainingdata.pro/data-marketBio
+Hi there!
+I am Henry Shan (or Haotian Shan) on kaggle.
+You can reach out to me at any time via email at 1720070202@qq.comBio
+Hello colleagues!
+My name is Ryzhkov Alexander and I'm the head of LightAutoML group.
+At the end of 2020 we opensourced our LightAutoML python library aimed at Automated Machine Learning (AutoML). It is designed to be lightweight and efficient for various tasks (binary/multiclass classifcation and regression) on tabular datasets which contains different types of features: numeric, categorical, dates, texts etc.
+LightAutoML installation is pretty simple - pip install -U lightautoml
+Official LightAutoML documentation
+LightAutoML provides not only presets suite for end-to-end ML tasks solving, but also the easy-to-use ML pipeline creation constructor including data preprocessing elements, advanced feature generation, CV schemes (including nested CVs), hyperparameters tuning, different models and composition building methods. It also gives the user an option to generate model training and profiling reports to check model results and find insights which are not obvious from initial dataset.
+
+expand_more
+View MoreBio
+Hi,
+I am a creative and analytical software engineer student with a passion for technology and a desire to push the boundaries of what is possible. I am proficient in multiple programming languages and familiar with a wide range of software development tools.Bio
+No bio yet...
+
+Quietly working awayBio
+vous n'êtes pas vaincu lorsque vous perdez vous êtes vaincu lorsque vous quittezBio
+
+
+Hi 👋, I'm Abdulrahman Elbanna
+
+
+expand_more
+View MoreBio
+hi.Bio
+Machine Learning & Deep Learning ArdentBio
+I am a freelance A.I and Data Science consultant. I've worked with the United Nations, Farmer's Insurance, Wal-Mart, Best Buy, 1-800-Flowers, Planned Parenthood, Vicrtoria's Secret, MetLife, SAKS Analytics, North Carolina Health Department and some other small companies, governments, and universities in the US, Pakistan, Canada, United Kingdom, Lithuania, China, Bangladesh, Ireland, Sri Lanka and the Middle East. Currently, I am working on few consulting assignments in government's use of AI and cyber-connected world. Here are two of my CNN Interviews on the power of datasets and who is joining ISIS. I've recently published a book Kaggle for Beginners. I hope you will enjoy it.Bio
+Hello, my name is Utkarsh Saxena and I am a machine learning and deep learning expert with a proven track record of success. With over 3-4 years of experience in the field, I have designed and implemented algorithms that have received widespread recognition. I hold a degree in Computer Science and Engineering and I am passionate about solving complex problems using advanced machine-learning techniques.
+I have worked on several projects across various industries, including healthcare, finance, and e-commerce. My portfolio includes several projects hosted on Kaggle, which have cemented their reputation as pioneering figures in the field. I am particularly interested in natural language processing, computer vision, and reinforcement learning, and I have expertise in building models using TensorFlow, Keras, and PyTorch.
+In addition to my technical expertise, I am a skilled communicator and collaborator, able to work effectively with teams and stakeholders from diverse backgrounds. I am passionate about sharing my knowledge and insights with others and have a solid commitment to advancing the field of machine learning through innovative research and development.
+Overall, I am a dedicated and accomplished machine learning and deep learning practitioner, passionate about pushing the boundaries of what is possible in this exciting and rapidly evolving field. I am always eager to take on new challenges and work with others to find creative solutions to complex problems.
+expand_more
+View MoreBio
+🚀 Kaggle Explorer | IT Enthusiast | Math Lover | Cricket Aficionado 🏏 | Research Enthusiast 📚
+🎓 IT Student @ NSUT | Kaggle Master🟠 | Data Maestro 💻
+🔍 Unraveling the mysteries of data with a passion for problem-solving and a knack for algorithms. From the classrooms of NSUT to the competitive arenas of Kaggle, I thrive on the synergy between technology and mathematics.
+📊 Turning data into insights is my playground. As a Kaggle Master, I revel in the challenges of real-world datasets, constantly pushing the boundaries of what's possible in the world of machine learning.
+➕ When I'm not crafting code, you'll find me immersed in the elegance of mathematics, where every equation is a puzzle waiting to be solved. From algorithms to abstract concepts, I find beauty in the language of numbers.
+🏏 A cricket enthusiast on the field and a data enthusiast off it. Just as every match has its strategy, every dataset has its story, and I love telling both.
+expand_more
+View MoreBio
+Master's degree student.Bio
+Recommender Systems at NVIDIABio
+
+Hello! 😊 Hi, I'm Muhammad Sheraz
+A proficient Machine Learning Engineer and Data Scientist with expertise in programming languages, ML frameworks, and data analysis. 🚀 With a deep understanding of supervised and unsupervised learning techniques, I'm committed to delivering top-notch results.
+Passionate about the potential of artificial intelligence, I'm an avid learner and thrive in dynamic teams. My technical skills encompass Python, Pandas, NumPy, Seaborn, Matplotlib, Plotly, Scikit-Learn, TensorFlow, Keras, MySQL, MongoDB, and more, along with proficiency in NLP, Data Analysis, Data Visualization, and Statistical Analysis.
+I bring valuable experience as a Data Analyst, Data Science Intern, and ML Engineer, and have worked on impactful projects, including deploying ML models and building Face Recognition features using Hugging-Face and Langchain.
+In addition to my professional pursuits, I enjoy playing cricket 🏏
+Let's connect and explore groundbreaking possibilities in technology together. I'm eager to collaborate on meaningful projects and create innovative solutions that redefine the realm of AI and Data Science.
+expand_more
+View MoreBio
+Data ScientistBio
+I am trying to do something useful.
+Military and sports data
+Data about Ukraine
+russian losses applicationBio
+No bio yet...
+
+Quietly working awayBio
+Hi!!, I'm Anoop Johny 🇮🇳👨‍💻
+Highly motivated Bioinformatics Bachelor's graduate with first-class honors and currently pursuing a Master of Science in Life Science Informatics. Experienced in Python, Java, C, R, and more. Skilled in various Bioinformatics tools and wet lab techniques. Passionate about Applied Bioinformatics, Data Science, Computer-Aided Drug Discovery, and AI. Connect with me on LinkedIn, GitHub, MyWebsite, Medium, Koo App, and Kaggle.
+Thank you!
+Kindest regards 🍎🌌📚Bio
+Here for growth!Bio
+No bio yet...
+
+Quietly working awayBio
+🌱 About Me
+Hi, I'm Yousef Mohamed, an AI enthusiast and student, currently diving into the world of Machine Learning. 🚀
+📚 Currently Learning
+Exploring the depths of PyTorch.
+📫 Let's Connect
+expand_more
+View MoreBio
+Hello, I'm Sourav. Born and raised in Kolkata, I now reside in Bangalore, where I work as a Senior Data Scientist at Launchpad.
+In 2018, I began my exploration of Artificial Intelligence, and its possibilities immediately captivated me. Consuming videos and articles on the topic became a casual pastime, but I soon became enamored with the potential of Machine Learning - Data Science. This interest motivated me to pursue a career in the field of Data Science.
+As a Data Scientist, I take pleasure in delving into data, identifying connections across different fields, teams, and industries, and utilizing data and customized algorithms to solve business problems. With a strong technical skill set and a background in Computer Science Engineering, I am well-prepared to handle complex Machine Learning & Data Analytics tasks.
+I am currently seeking Full-Time roles in Data Science & Machine Learning. You can reach out to me via email at souravbanerjee216@gmail.comBio
+Unveiling the Mysteries of Office Coffee Consumption: A Data-Driven ExplorationBio
+Kaggle 2X Grandmaster & 1X Master 🏆 | Former Google Cloud Ready Facilitator ☁️ | Tech, Cloud & ML Enthusiast 💻 | Open Source Contributor 🌐
+IT graduate with expertise in data, software, and cloud computing. Analytical and detail-oriented, with a proven track record of success in problem-solving. Experienced in implementing cutting-edge technologies and best practices to increase efficiency and reduce costs. Passionate about leveraging technology to help organizations reach their goals. Ready to take on new challenges and develop my skills even further.
+📫 How to reach me drahulsingh124@gmail.comBio
+No bio yet...
+
+Quietly working awayBio
+No bio yet...
+
+Quietly working awayBio
+No bio yet...
+
+Quietly working awayBio
+No bio yet...
+
+Quietly working awayBio
+BS in Data Science | Proficient in Python | Programming Enthusiast | AI Advocate 🚀|Positioned at the intersection of data and technology, with a keen interest in shaping the future of Artificial Intelligence. 💻📊🐍Bio
+Hi!
+I'm Karnika Kapoor, a passionate individual driven by my enthusiasm for Machine Learning and Data Science. With a background in Mechanical Engineering and specialization in CAD, I bring a unique perspective to the field. I find great joy in sharing my knowledge and insights through my blog. Being a part of the Kaggle community, I am eager to learn from and collaborate with fellow data enthusiasts, continuously upskilling myself along the way. Let's connect and embark on exciting data science journeys together!
+Best Wishes!Bio
+No bio yet...
+
+Quietly working awayBio
+No bio yet...
+
+Quietly working awayBio
+Welcome to my profile!
+About Me
+Hello Kagglers! 👋 I'm Muslimbek, a passionate data scientist and machine learning enthusiast. My journey in the world of data spans from exploratory data analysis to building predictive models.
+Skills
+Machine Learning: I love working on various machine learning tasks, from classification and regression to natural language processing.
+Data Visualization: I enjoy creating insightful visualizations to tell compelling stories from data.
+Python: Proficient in Python, with expertise in popular libraries such as Pandas, NumPy, and scikit-learn.
+Deep Learning: Exploring the fascinating realms of deep neural networks with frameworks like TensorFlow and PyTorch.
+expand_more
+View MoreBio
+Lao Tzu once said that "Start with small steps. Each step brings you closer to your goal." As an engineer interested in robotics and artificial intelligence technologies, I live by this motto.
+I make it my mission to revolutionize manufacturing using AI and robotics technologies to create a faster, more precise, and more efficient production system.
+Through my efforts, I will contribute to reducing manufacturing costs, enhancing product quality, and maximizing customer satisfaction.Bio
+Passionate and results-driven Data Scientist with a strong foundation in Artificial Intelligence and Data Sciences. Throughout my academic journey, pursuing a BSc (Hons) in Artificial Intelligence and Data Science, I have developed a deep fascination for the limitless possibilities that lie within the field of data. My commitment to continuous learning and exploring cutting-edge technologies has equipped me with a diverse skill set and a comprehensive understanding of Machine Learning, Deep Learning, Natural Language Processing (NLP), Cloud Computing, and other pivotal areas.Bio
+Cirurgiã Dentista (Doctor of Dental Surgery), UFRJ (20/12/1983).
+Specialist in Prosthodontics, Policlínica Geral do Rio de Janeiro (20/12/1987).
+Labour dentistry, Faculdade de Odontologia São Leopoldo Mandic (30/07/2008).
+Public employee at SSP/RJ , during 27 years - retired (17/01/2017).
+Brevet international de plogée sous-marine, Confederation Mondiale des Activités Subaquatiques (23/10/1991).
+I am a fan of CSI and The Big Bang Theory (TV Series).Bio
+Product Manager and enthusiastic amateur data scientistBio
+No bio yet...
+
+Quietly working awayBio
+Data Science & ML Enthusiast. Support me at https://go.agungpambudi.com/ds
+📝 Activity
+Agung Pambudi’s Profile. CodeSignal. Available at: https://app.codesignal.com/profile/agungpambudi
+Agung Pambudi’s Profile. HackerRank. Available at: https://www.hackerrank.com/agungpambudi
+
+🚀 Acknowledgements
+expand_more
+View MoreBio
+No bio yet...
+
+Quietly working awayBio
+No bio yet...
+
+Quietly working awayBio
+No bio yet...
+
+Quietly working awayBio
+I help organizations use data science to do better.Bio
+No bio yet...
+
+Quietly working awayBio
+An Eternal Learner with Infinite Curiosity …
