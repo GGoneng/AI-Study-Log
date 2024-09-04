@@ -152,7 +152,13 @@ resultDF = pd.DataFrame(result).loc[:, ["test_score", "train_score"]]
 print(resultDF, "\n\n")
 
 # - 최적화된 모델 추출
-best_model = result['estimator'][2]
+resultDF['diff'] = resultDF['test_score'] - resultDF['train_score']
+resultDF['diff'] = abs(resultDF['diff'])
+
+resultDF.sort_values(by = 'diff', inplace = True)
+print(resultDF)
+
+best_model = resultDF['estimator'][0]
 
 # 테스트 데이터로 확인
 print(best_model.predict(X_test), "\n\n")

@@ -7,7 +7,7 @@
 # 모듈 로딩
 from sklearn.preprocessing import LabelEncoder
 
-items = ['TV', '냉장고', '선풍기', '에어컨']
+items = ['TV', '냉장고', '선풍기', '에어컨', 2,]
 
 # 라벨 / 정수 인코더 인스턴스 생성
 lencoder = LabelEncoder()
@@ -41,7 +41,7 @@ print(oh_items.toarray(), "\n\n")
 # 정수 인코딩 ==> 범주형 피쳐
 from sklearn.preprocessing import OrdinalEncoder
 
-data = [['male', 'C', 'child'], ['female', 'S', 'child']]
+data = [['male', 'C', 'child', 8 ,9], ['female', 'S', 'child', 7, 5]]
 
 # 정수 인코더 인스턴스 생성
 odEncoder = OrdinalEncoder()
