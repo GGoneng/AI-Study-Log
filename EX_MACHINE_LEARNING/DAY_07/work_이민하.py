@@ -54,7 +54,7 @@ def best_param(model, param, X_train, y_train):
     searchCV = GridSearchCV(model, param, cv = 5, verbose = True, return_train_score = True)
     searchCV.fit(X_train, y_train)
     
-    return searchCV.best_estimator_
+    return searchCV.best_estimator_, searchCV.best_score_
 
 def best_model(model, X_train, y_train):
     result = cross_validate(model, X_train, y_train,
