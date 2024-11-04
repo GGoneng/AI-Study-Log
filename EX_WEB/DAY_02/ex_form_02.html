@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 태그</title>
+</head>
+<body>
+    <h3>textarea태그 사용법</h3>
+    <hr>
+    <form>
+        <fieldset>
+            <legend>블로그 글쓰기</legend>
+            <p>
+                <label> 제목 </label>
+                <input type="text" minlength="3" maxlength="10" name="title" 
+                placeholder="긁적" autofocus="True" >
+            </p>
+
+            <p>
+                <label> 내용 </label>
+                <textarea type="message" placeholder="내용을 입력하세요" rows="10" cols="50"></textarea>
+            </p>
+        </fieldset>
+        <input type="submit" value="저장">
+    </form>
+</body>
+</html>

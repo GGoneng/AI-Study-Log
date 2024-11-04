@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table 태그</title>
+    <!--내부 CSS 설정-->
+    <style>
+        body {
+            margin: 50px;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Table 태그</h3>
+    <!-- 상품 모곩 테이블-->
+     <table border="1">
+        <tr>
+            <th>번호</th>
+            <th>제품명</th>
+            <th>수량</th>
+            <th>가격</th>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>사이다</td>
+            <td>1</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>콜라</td>
+            <td rowspan="2">2</td>
+            <td rowspan="2">1500</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>탄산수</td>
+        </tr>
+        <tr>
+            <td>총합</td>
+            <td colspan="3">12300</td>
+        </tr>
+     </table>
+    
+</body>
+</html>

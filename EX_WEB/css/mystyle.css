@@ -1,0 +1,17 @@
+p {
+    background-color:rgb(116, 186, 216);
+}
+#secondP {
+    background-color:rgba(85, 255, 0, 0.785);
+    color:blue;
+    font-weight:bold;
+}
+body {
+    align-content: center;
+    background-image:url(../data/ppoppi.jpg);
+}
+.mon{
+    background-color:rgba(233, 31, 203, 0.785);
+    color:hotpink;
+    font-weight:bold;
+}

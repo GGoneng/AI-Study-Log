@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS & TAG</title>
+    <!--내부 CSS 설정-->
+    <style>
+        * {text-align: center;}
+
+        html {height: 100%}
+        body {height: 100vh; width:100vw;}
+
+        #header, header {background-color: rgb(7, 122, 86);
+                        height:20vh}
+        #menu, nav {background-color: rgb(176, 110, 24);
+                width:20vw;
+                height:80vh;
+                float:left}
+        #center, section {background-color: rgb(92, 139, 141);
+            display:inline-block;
+                width:60vw;
+                height:80vh;}
+        #side, aside {background-color: rgb(195, 189, 228);
+                width:20vw;
+                height:80vh;
+                float:right;
+            }
+        #footer, footer {background-color: rgb(106, 64, 185);
+                clear:both;}
+    </style>
+</head>
+<body>
+    <!-- <div id="header">HEADER</div>
+    <div id="menu">MENU</div>
+    <div id="center">CENTER</div>
+    <div id="side">SIDE</div>
+    <div id="footer">FOOTER</div> -->
+    <header>
+        <h1>MY PROJECT DEMO</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#ml">머신러닝</a></li>
+            <li><a href="#dl">딥러닝</a></li>
+            <li><a href="#vi">비젼딥러닝</a></li>
+            <li><a href="#nlp">자연어딥러닝</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div id="ml">
+            머신러닝
+        </div>
+        <div id="dl">
+            딥러닝
+        </div>
+        <div id="vi">
+            비젼
+        </div>
+        <div id="nlp">
+            자연어
+        </div>
+    </section>
+    <aside>SIDE</aside>
+    <footer>FOOTER</footer>
+</body>
+</html>

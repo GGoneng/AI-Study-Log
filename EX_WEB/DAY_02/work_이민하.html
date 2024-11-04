@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김치 전문점 홈페이지</title>
+    <link type="text/css" rel="stylesheet" href="../css/kimchi.css">
+</head>
+<body>
+    <h1>김치 전문점에 어서오세요!<hr></h1>
+    <img src="../data/kimchi.gif" width="200" height="200">
+    
+    <p class="text1">
+        아삭, 맛있는<br>
+        갓 담근 신선한 배추김치
+    </p>
+
+    <p class="text2">
+        중간 유통 과정없이 <strong id="highlight">주문 즉시 만들어 
+        배송</strong>되어 더 맛있고 신선한 김치를 맛보실 수 있습니다.
+    </p>
+
+    <style>
+        #highlight {color:rgb(236, 52, 52)}
+    </style>
+    <!-- 인라인 CSS -->
+    <h3 style="color:rgb(149, 107, 59) ">메뉴 선택<hr></h3>
+    <form>
+        <fieldset>
+            <legend>김치 종류</legend>
+            <label>
+                <input type="radio" name="kimchi" value="1" checked="True"> 배추김치
+            </label>
+            
+            <label>
+                <input type="radio" name="kimchi" value="2"> 깍두기
+            </label>
+
+            <label>
+                <input type="radio" name="kimchi" value="3"> 총각김치
+            </label>
+
+            <label>
+                <input type="radio" name="kimchi" value="4"> 나박김치&emsp;
+            </label>
+            <input type="submit" value="주문하기">
+        </fieldset>
+        
+    </form>
+</body>
+</html>
