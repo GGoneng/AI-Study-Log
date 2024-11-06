@@ -1,0 +1,44 @@
+body {
+    background-color:rgb(255, 255, 246);
+    margin-left:29vw
+}
+
+h1 {
+    text-align:center
+}
+
+#tit {
+    background-color:rgb(209, 229, 246);
+    width:30vw;
+    height:60vh;
+    margin-left:100px;
+    margin-top:60px;
+    padding-top:30px;
+
+}
+
+form {
+    display:block;
+    width:15vw;    
+    padding-left:90px;
+}
+
+.stock {
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+#page {
+    margin-right:40px;
+    width:30px;
+}
+
+button {
+    margin-top:30px;
+    width:20vw;
+}
+
+.result {
+    margin-top:70px;
+    text-align:center;
+}

@@ -1,0 +1,28 @@
+        
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ㅠㅠ</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="tit">
+        <h1>주식 차트 분석</h1>
+        <form method="POST">
+            <label for="stock" class="stock"><strong>과목 코드 :</strong></label>
+                <input type="text" class="stock" id="stock" name="stock" required>
+            <label for="page" class="page"><strong>페이지 번호 :</strong></label>
+                <input type="number" class="page" id="page" name="page" min="1" max="100" step="1" required>
+            <button type="submit">입력</button>
+        </form>
+
+        {% if output %}
+            <div class="result">
+                <h2>분석 결과</h2>
+                <p><strong>예측값 :  {{ output }}원</strong></p>
+            </div>
+        {% endif %}
+    </div>
+</body>
