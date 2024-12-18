@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+    <style>
+        .board-container {
+            width: 80%;
+            margin: 50px auto;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+        }
+
+        .board-container th,
+        .board-container td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .board-container th {
+            background-color: #dbe4f8;
+            font-weight: bold;
+        }
+
+        .board-container td {
+            height: 30px;
+        }
+
+        .write-button {
+            display: block;
+            width: 100px;
+            padding: 10px;
+            margin: 20px auto;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            background-color: #003e81;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .write-button:hover {
+            background-color: #002b5c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-container">
+            <a href="{{ url_for('customer_mainpage') }}">
+                <img src="{{ url_for('static', filename='image/logo.png') }}" alt="로고" class="logo">
+            </a>
+            <div class="menu">
+                <a href="{{ url_for('notice_customer') }}" class="notice">공지</a>
+                <a href="{{ url_for('customer_mainpage') }}" class="graph">모니터링</a>
+                <a href="{{ url_for('board_customer') }}" class="board">게시판</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1 style="text-align: center;">게시판</h1>
+
+        <!-- 게시판 테이블 -->
+        <table class="board-container">
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일자</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in boards %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>
+                        <a href="{{ url_for('board_content', board_id=item['board_id']) }}">
+                            {{ item['board_title'] }}
+                        </a>
+                    </td> <!-- 제목 클릭 시 board_content로 이동 -->
+                    <td>{{ item['board_author'] }}</td>
+                    <td>{{ item['board_date'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- 글쓰기 버튼 -->
+        <a href="{{ url_for('write_board_customer') }}" class="write-button">글쓰기</a>
+    </main>
+</body>
+</html>

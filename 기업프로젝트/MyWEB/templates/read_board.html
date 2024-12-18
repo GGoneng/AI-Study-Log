@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판 글 보기</title>
+    <link rel="stylesheet" href="static/style3.css">
+    <style>
+        /* 제목 스타일 */
+        .post-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #003e81;
+        }
+
+        /* 내용 스타일 */
+        .post-content {
+            width: 60%;
+            margin: 20px auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            text-align: center; /* 오류 메시지 중앙 정렬 */
+            color: #666; /* 오류 메시지 색상 */
+        }
+    </style>
+</head>
+<body class="noto-sans-kr">
+    <header>
+        <div class="menu-container">
+            <a href="board_admin.html">
+                <img src="{{ url_for('static', filename='image/logo.png') }}" alt="로고" class="logo">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 글 제목 -->
+        <div id="post-title" class="post-title"></div>
+        
+        <!-- 글 내용 -->
+        <div id="post-content" class="post-content"></div>
+    </main>
+
+    <footer>
+        <img src="{{ url_for('static', filename='image/범일로고.png') }}" alt="범일로고" class="footer-logo-left">
+        <p>© 2024 Quasar. All rights reserved.</p>
+        <img src="{{ url_for('static', filename='image/경대로고.png') }}" alt="경대로고" class="footer-logo">
+    </footer>
+
+    <script>
+        // URL에서 post_id 추출
+        const params = new URLSearchParams(window.location.search);
+        const postId = params.get('post_id');
+
+        // 하드코딩된 글 데이터
+        const posts = {
+            "1": { title: "테스트 글 제목", content: "이것은 테스트 내용입니다." }
+        };
+
+        // 글 데이터 설정
+        const titleElement = document.getElementById('post-title');
+        const contentElement = document.getElementById('post-content');
+
+        if (posts[postId]) {
+            titleElement.textContent = posts[postId].title; // 제목 표시
+            contentElement.textContent = posts[postId].content; // 내용 표시
+        } else {
+            titleElement.textContent = ""; // 제목 비우기
+            contentElement.textContent = "글을 찾을 수 없습니다."; // 오류 메시지 상자 안에 표시
+        }
+    </script>
+</body>
+</html>
