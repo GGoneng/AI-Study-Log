@@ -1,0 +1,88 @@
+2024.11.14
+1.
+model = lstm,
+data = 1_week,
+embedding = 512,
+dropout = 0.5,
+result = 30 epoch, 0.76 r2 score, OVERFITTING
+
+2.
+model = lstm,
+data = 2_weeks,
+embedding = 1024,
+dropout = 0.8,
+result = 54 epoch, 0.736 r2 score, 0.046 mae loss, OVERFITTING
+
+3.
+model = lstm,
+data = 1_week,
+embedding = 256,
+dropout = 0.8,
+result = 39 epoch, 0.77 r2 score, 0.048 mae loss, OVERFITTING
+
+4.
+model = lstm,
+data = 1_week,
+embedding = 256,
+dropout = 0.9,
+bidirectional = False,
+result = epoch 37, 0.756 r2 score, 0.048 mae loss, OVERFITTING
+
+5.
+model = lstm,
+data = 2_week,
+embedding = 1024,
+dropout = 0.9.
+bidirectional = False,
+result = 구데기
+
+6.
+model = lstm,
+data = 2_week,
+embedding = 1024,
+dropout = 0.9.
+bidirectional = True,
+result = 구데기
+
+7.
+model = lstm,
+data = 1_week,
+embedding = 1024,
+dropout = 0.9.
+bidirectional = False,
+result = epoch 44, 0.799 r2 score, 0.042 mae loss, OVERFITTING
+
+8.
+model = lstm,
+data = water_2_week,
+embedding = 128,
+dropout = 0.9,
+n_layers = 3,
+bidirectional = True,
+result = epoch 71, 0.71 r2 score, 0.05~ mae loss, OVERFITTING
+
+9.
+model = lstm,
+data = 1_week,
+embedding = 64,
+dropout = 0.9.
+bidirectional = True,
+result = epoch 98, 0.83 r2 score, 0.03~ mae loss, OVERFITTING
+
+2024.11.14
+
+10.
+model = lstm,기업 프로젝트/saved_models/model_weights_73.pth
+data = 1_week,
+embedding = 32,
+dropout = 0.9.
+bidirectional = True,
+result = epoch 373, 0.8415 r2 score, 0.03 mae loss, OVERFITTING
+
+11.
+model = lstm,
+data = water_2_week,
+embedding = 256,
+dropout = 0.9.
+bidirectional = True,
+result = 구데기
