@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+    <style>
+        /* 본문 스타일 */
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* 화면 위로 올림 */
+            padding-top: 50px; /* 위쪽 여백 추가 */
+        }
+
+        .card-container {
+            margin-top: 20px;
+            background: white;
+            border-radius: 15px; /* 둥근 테두리 */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 그림자 강화 */
+            padding: 50px; /* 박스 안 여백 확장 */
+            width: 650px; /* 박스 크기 증가 */
+            height: 450px;
+            text-align: center;
+        }
+
+        .content-title {
+            font-size: 32px; /* 제목 크기 증가 */
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+            font-size: 18px; /* 표 글자 크기 증가 */
+            text-align: left;
+        }
+
+        td {
+            padding: 15px;
+            border: 1px solid #ddd;
+            vertical-align: middle;
+        }
+
+        td:first-child {
+            background-color: #f7f7f7; /* 강조 */
+            font-weight: bold;
+            text-align: left;
+            width: 150px; /* 열 너비 증가 */
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 80%; /* 입력 필드 크기 확장 */
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px; /* 글자 크기 증가 */
+            text-align: left;
+            
+        }
+
+        .checkbox-container {
+            gap: 50px;
+            align-items: center;
+            font-size: 16px; /* 라벨 글자 크기 증가 */
+        }
+
+        button.login-button {
+            width: 100%;
+            padding: 15px; /* 버튼 크기 증가 */
+            background-color: rgba(20, 88, 235, 0.6);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px; /* 버튼 글자 크기 증가 */
+            cursor: pointer;
+        }
+
+        button.login-button:hover {
+            background-color: rgba(20, 88, 235, 0.8);
+        }
+
+        .center-align {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .center-align a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 16px; /* 링크 글자 크기 증가 */
+        }
+
+        .center-align a:hover {
+            text-decoration: underline;
+        }
+
+        #find-pw {
+            margin-right:510px;
+        }
+        
+    </style>
+</head>
+<body class="noto-sans-kr">
+    <div id="wrapper">
+        <!-- 헤더 -->
+        <header>
+            <div class="menu-container">
+                <a href="/">
+                    <img src="{{ url_for('static', filename='image/logo.png') }}" alt="로고" class="logo">
+                </a>
+            </div>
+            <div class="blue-background"></div>
+        </header>
+
+        <!-- 본문 -->
+        <main>
+            <div class="content">
+                <div class="card-container">
+                    <h2 class="content-title">로그인</h2>
+                    <form action="/" method="POST">
+                        <table>
+                            <tr>
+                                <td>아이디</td>
+                                <td><input type="text" name="user_id"></td>
+                            </tr>
+                            <tr>
+                                <td>비밀번호</td>
+                                <td><input type="password" name="password"></td>
+                            </tr>
+                            <tr>
+                                <td>구분</td>
+                                <td class="checkbox-container">
+                                    <label><input type="radio" name="role" value="개인"> 개인</label>
+                                    <label><input type="radio" name="role" value="기관"> 기관</label>
+                                </td>
+                            </tr>
+                        </table>
+                        <button class="login-button">로그인</button>
+                        <div class="center-align">
+                            <span id="find-id"><a href="/find_id">ID</a></span>
+                            <span id="find-pw"><a href="/find_pw">/PW 찾기</a></span>
+                            <span><a href="/register">회원가입</a></span>
+                        </div>
+                        {% if message %}
+                        <p style="color: red;">{{ message }}</p>
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <!-- 푸터 -->
+        <footer>
+            <img src="{{ url_for('static', filename='image/범일로고.png') }}" alt="범일로고" class="footer-logo-left">
+            <p>2024 Quasar. All rights reserved.</p>
+            <img src="{{ url_for('static', filename='image/경대로고.png') }}" alt="경대로고" class="footer-logo">
+        </footer>
+    </div>
+</body>
+</html>
+

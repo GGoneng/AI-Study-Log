@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일반 고객 메인화면</title>
+    <link rel="stylesheet" href="static/style3.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script> 
+    <style>
+        /* 메인 컨텐츠 스타일 */    
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            gap: 40px; /* 박스 간 간격 */
+            color: white;
+        }
+        
+        .content-box {
+            /* background-color: white; */
+            width: 80%; /* 화면의 80% 너비 */
+            max-width: 1000px; /* 최대 너비 */
+            height: 150px; /* 고정 높이 */
+            color: white;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            position: relative; /* 내부 요소 배치를 위해 position 설정 */
+            background-color: white;
+        }
+        
+        #box-title {
+            position: absolute;
+            top: 10px; /* 상단 여백 */
+            left: 15px; /* 왼쪽 여백 */
+            margin: 0;
+            color:rgb(16, 49, 120);
+            font-weight: bold;
+        }
+        
+        .plus-icon {
+            position: absolute;
+            top: 15px; /* 상단 여백 */
+            right: 15px; /* 오른쪽 여백 */
+            width: 15px; /* "+" 아이콘 크기 */
+            height: 15px;
+            cursor: pointer;
+        }
+
+        #monitoring-box {
+            height: auto ;
+            position: relative;
+            padding-top: 50px;
+        }
+    
+
+        #myChart {
+            padding-top: 15px;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-bottom: 20px;
+            width: 700px;
+            height: 500px;
+            max-height: 500px;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        #announcement {
+            display: flex;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            width: 60%;
+            height: 40px;  
+            background-color: white;
+            border-radius: 30px;
+            border: 1.5px solid rgba(20, 88, 235, 0.559);
+            margin-bottom: 50px;
+        }
+        
+        #announcement-content {
+            color: black;
+            font-size: 13pt;
+            margin-top: 7px;
+            margin-left: 10px;
+        }
+
+        .megaphone-icon {
+            margin-left: 12px;
+            margin-top: 10px;
+            width: 20px;
+            height: 20px;   
+        }
+
+        #status_window {
+            display: flex;
+            margin-left: 120px;
+            width: 60px;
+        }
+
+        .circle {
+            position: absolute;
+            margin-top: 18px;
+            margin-left: 115px;
+            width: 17px; /* "+" 아이콘 크기 */
+            height: 17px;
+        }
+
+        .status {
+            position: absolute;
+            font-size: 12pt;
+            font-weight: bold;
+            color: rgb(16, 49, 120);
+        }
+    </style>
+</head>
+<body class="noto-sans-kr">
+    <div id="wrapper">
+        <!-- 헤더 -->
+        <header>
+            <!-- 파란색 메뉴 영역 -->
+            <div class="menu-container">
+                <a href="customer_mainpage">
+                    <img src="{{ url_for('static', filename='image/logo.png') }}" alt="로고" class="logo">
+                </a>
+                <div class="menu">
+                    <a href="notice_customer" class="notice">공지</a>
+                    <a href="customer_mainpage" class="graph">모니터링</a>
+                    <a href="board_customer" class="board">게시판</a>
+                </div>
+            </div>   
+        </header>
+        <script>
+            // DOM 요소 가져오기
+            const menuContainer = document.querySelector('.menu-container');
+        
+            // 스크롤 이벤트 리스너 추가
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 0) {
+                    menuContainer.classList.add('scrolled'); // 클래스 추가
+                } else {
+                    menuContainer.classList.remove('scrolled'); // 클래스 제거
+                }
+            });
+        </script>
+
+        <!-- 오른쪽 고정 박스 -->
+        <div class="right-box">
+        <!-- 박스 내용은 나중에 추가 -->
+        </div>
+        <!-- 메인 컨텐츠 -->
+        <main class="main-container">             
+            <div id="announcement">
+                <img src="{{ url_for('static', filename='image/megaphone.png')}}" class="megaphone-icon"></a>
+                <h5 id="announcement-content">공지: </h6>
+            </div>
+            
+            <div class="content-box" id="monitoring-box">
+                <div class="monitoring-title">
+                    <h2 id="box-title">모니터링</h2>
+                    
+                    <img src="{{ url_for('static', filename='image/plus.png') }}" alt="추가 버튼" class="plus-icon">
+                </div>
+                <canvas id="myChart" width="400" height="200"></canvas>
+                <script>
+                    function createChart(labels, values1, values2, values3, elec_errorMargin) {
+                        const ctx = document.getElementById('myChart').getContext('2d');
+                
+                        if (window.myChart && typeof window.myChart.destroy === 'function') {
+                            window.myChart.destroy();
+                        }
+
+                        const upperBound = values3.map((value, index) => value + elec_errorMargin[index]);
+                        const lowerBound = values3.map((value, index) => value - elec_errorMargin[index]);
+                
+                        window.myChart = new Chart(ctx, {
+                            type: 'line',
+                            data: {
+                                labels: labels,
+                                datasets: [
+                                    {
+                                        label: '수도',
+                                        data: values1,
+                                        backgroundColor: 'rgba(53, 183, 255, 0.4)',
+                                        borderColor: '#35B7E0',
+                                        borderWidth: 3,
+                                        tension: 0.3,
+                                        yAxisID: 'y1'
+                                    },
+                                    {
+                                        label: '전기',
+                                        data: values2,
+                                        backgroundColor: 'rgba(229, 163, 6, 0.4)',
+                                        borderColor: '#E5A306',
+                                        borderWidth: 3,
+                                        tension: 0.3,
+                                        yAxisID: 'y2'
+                                    },
+                                    {
+                                        label: '전기 예측',
+                                        data: values3,
+                                        backgroundColor: 'rgba(232, 212, 0, 0.9)',
+                                        borderColor: '#E8D400',
+                                        borderWidth: 3,
+                                        tension: 0.3,
+                                        yAxisID: 'y2',
+                                        borderDash: [5, 5]
+                                    },
+                                    {
+                                        label: '오차 범위',
+                                        data: upperBound,
+                                        borderColor: 'rgba(232, 212, 0, 0)',
+                                        backgroundColor: 'rgba(232, 212, 0, 0.2)',
+                                        fill: '+1',
+                                        tension: 0.3,
+                                        yAxisID: 'y2'
+                                    },
+                                    {
+                                        label: '오차 범위',
+                                        data: lowerBound,
+                                        borderColor: 'rgba(232, 212, 0, 0)',
+                                        backgroundColor: 'rgba(232, 212, 0, 0.2)',
+                                        fill: '-1',
+                                        tension: 0.3,
+                                        yAxisID: 'y2'
+                                    }
+                                ],
+                            },
+                            options: {
+                                responsive: true,
+                                maintainAspectRatio: false,
+                                animation: {
+                                    duration: 1500,
+                                    easing: 'easeOutQuart'
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            font: {
+                                                family: "'Noto Sans KR', sans-serif"
+                                            },
+                                        },
+                                    },
+                                },
+                                
+
+
+                                scales: {
+                                    x: {
+                                        grid: {
+                                            display: false
+                                        },
+                                        
+                                        ticks: {
+                                            font: {
+                                                family: "'Noto Sans KR', sans-serif",
+                                            },
+                                        },
+                                    },
+                                    y1: {
+                                        type: 'linear',
+                                        position: 'left',
+                                        beginAtZero: true,
+                                        grid: {
+                                            display: false
+                                        },
+                                        min: 0,
+                                        max: 500,
+                                        title: {
+                                            display: true,
+                                            text: '수도 사용량 (L)',
+                                            color: '#000000',
+                                            font: {
+                                                family: "'Noto Sans KR', sans-serif",
+                                                size: 14,
+                                            }
+                                        }
+                                    },
+                                    y2: {
+                                        type: 'linear',
+                                        position: 'right',
+                                        beginAtZero: true,
+                                        grid: {
+                                            display: false
+                                        },
+                                        min: 1,
+                                        max: 2,
+                                        title: {
+                                            display: true,
+                                            text: '전기 사용량 (kWh)',
+                                            color: '#000000',
+                                            font: {
+                                                family: "'Noto Sans KR', sans-serif",
+                                                size: 14,
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        });
+                    }
+                
+                    // Flask에서 데이터를 직접 삽입
+                    const labels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ,16 ,17, 18, 19, 20, 21, 22, 23,24, 25, 26, 27]; // 예: 라벨 데이터
+                    const values1 = {{ output1|tojson }}; // 수도 데이터
+                    const values2 = {{ output2|tojson }}; // 전기 데이터
+                    const values3 = {{ output|tojson }};
+                    const ElecErrorMargin = {{ ElecErrorMargin|tojson }};
+                    createChart(labels, values1, values2, values3, ElecErrorMargin);
+                </script>
+                
+            </div>
+            <div class="content-box" id="board-box">
+                <h2 id="box-title">게시판</h2>
+                <img src="{{ url_for('static', filename='image/plus.png') }}" alt="추가 버튼" class="plus-icon">
+            </div>
+        </main>
+        <!-- 푸터 -->
+
+    </div>
+
+    <footer>
+        <img src="{{ url_for('static', filename='image/범일로고.png') }}" alt="범일로고" class="footer-logo-left">
+        <p>2024 Quasar. All rights reserved.</p>
+        <img src="{{ url_for('static', filename='image/경대로고.png') }}" alt="경대로고" class="footer-logo">
+    </footer>
+</body>
+</html>

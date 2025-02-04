@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style3.css') }}">
+    <style>
+        /* 게시판 테이블 스타일 */
+        .board-container {
+            width: 65%;
+            margin: 50px auto;
+            border-collapse: collapse;
+            font-family: Arial, sans-serif;
+            position: relative;
+           
+        }
+
+        .board-container th,
+        .board-container td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+            background-color: white;
+        }
+
+        .board-container th {
+            background-color: #dbe4f8;
+            font-weight: bold;
+        }
+
+        .board-container td {
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu-container">
+            <a href="customer_mainpage">
+                <img src="{{ url_for('static', filename='image/logo.png') }}" alt="로고" class="logo">
+            </a>
+            <div class="menu">
+                <a href="notice_customer" class="notice">공지</a>
+                <a href="customer_mainpage" class="graph">모니터링</a>
+                <a href="board_customer" class="board">게시판</a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <h1 style="text-align: center;">공지사항</h1>
+
+        <!-- 게시판 테이블 -->
+        <table class="board-container">
+            <thead>
+                <tr>
+                    <th style="width: 10%;">NO</th>
+                    <th style="width: 50%;">제목</th>
+                    <th style="width: 20%;">작성일자</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in announcement %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>
+                        <a href="{{ url_for('notice_content', announcement_id=item['announcement_id']) }}">
+                            {{ item['announcement_title'] }}
+                        </a>
+                    </td> <!-- 제목 클릭 시 notice_content로 이동 -->
+                    <td>{{ item['announcement_date'].strftime('%Y-%m-%d') }}</td> <!-- 작성일자 -->
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <img src="{{ url_for('static', filename='image/범일로고.png') }}" alt="범일로고" class="footer-logo-left">
+        <p>2024 Quasar. All rights reserved.</p>
+        <img src="{{ url_for('static', filename='image/경대로고.png') }}" alt="경대로고" class="footer-logo">
+    </footer>
+</body>
+</html>
+
