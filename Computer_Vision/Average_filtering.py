@@ -179,27 +179,30 @@ def getPSNR(totalMSE):
 
     return PSNR
 
+# Create a function that zero padding
 def zero_padding(img, num):
+    # Padding by Using Numpy
     img = np.pad(img, ((num, num), (num, num)), mode = "constant", constant_values = 0)    
 
     return img
 
+# Create a function that Average Filtering
 def filtering(img, size):
-    filtering_image = np.array(np.zeros((img.shape[0] - (size - 1), img.shape[1] - (size - 1))))
-    sum = 0
+    h, w = img.shape
+    out_h = h - size + 1
+    out_w = w - size + 1
 
-    for i, arr in enumerate(img):
-        if (i + size) == img.shape[1]:
-            break
-        else:
-            for j, val in enumerate(arr):
-                if (j + size) == img.shape[0]:
-                    break
-                else:
-                    print(img[i : i + size, j : j + size])
-                
+    # Make a Empty Array
+    filtering_image = np.zeros((out_h, out_w))
 
+    # Find a mean value in 3x3 Filter and Filtering the Y Channel
+    for i in range(out_h):
+        for j in range(out_w):
+            region = img[i:i+size, j:j+size]
+            avg_val = np.mean(region)
+            filtering_image[i, j] = avg_val
 
+    return filtering_image
 
 # Main Funciton
 if __name__ == "__main__":
@@ -207,22 +210,53 @@ if __name__ == "__main__":
     # Set a File Path
     rgb_img = set_path("test.jpg")   
 
+    # Show a Original RGB Image
+    show_image(rgb_img)
+
     # Transform the Image file (OpenCV Version)
     cv_ycbcr_img = transform_rgb_to_ycbcr_cv(rgb_img)
     cv_y_img = extract_y_channel(cv_ycbcr_img)
+
+    # Zero Padding a Y Channel
+    cv_y_img = zero_padding(cv_y_img, 1)
+
+    # Average Filtering the Y Channel    
+    cv_y_img = filtering(cv_y_img, 3)
+
+    # Change the Original Y Channel to the Filtering Y Channel
+    cv_ycbcr_img[:, :, 0] = cv_y_img
+
+    # Recover the YCbCr Image to RGB Image
     cv_rgb_img = transform_ycbcr_to_rgb_cv(cv_ycbcr_img)
 
-    # for i, img in enumerate(cv_y_img):
-    #     for j, val in enumerate(img):
-    #         if j == 3:
-    #             break
-    #         else:
-    #             print(val, end = " ")
-    #     if i == 2:
-    #         break
-    #     else:
-    #         print()
+    show_image(cv_rgb_img)
+    print(f"PSNR implement_1 : {getPSNR(getMSE(rgb_img, cv_rgb_img))}")
 
-    cv_y_img = zero_padding(cv_y_img, 1)
+
+    cv_ycbcr_img = transform_rgb_to_ycbcr_cv(rgb_img)
+    cv_y_img = extract_y_channel(cv_ycbcr_img)
+
+    # Zero Padding and Filtering the Y Channel (5 Times)
+    for i in range(5):
+        cv_y_img = zero_padding(cv_y_img, 1)
+        cv_y_img = filtering(cv_y_img, 3)
+
+    cv_ycbcr_img[:, :, 0] = cv_y_img
+    cv_rgb_img = transform_ycbcr_to_rgb_cv(cv_ycbcr_img)
+
+    show_image(cv_rgb_img)
+    print(f"PSNR implement_5 : {getPSNR(getMSE(rgb_img, cv_rgb_img))}")
+
     
-    filtering(cv_y_img, 3)
+    cv_ycbcr_img = transform_rgb_to_ycbcr_cv(rgb_img)
+    cv_y_img = extract_y_channel(cv_ycbcr_img)
+
+    # Zero Padding and Filtering the Y Channel (10 Times)
+    for i in range(10):
+        cv_y_img = zero_padding(cv_y_img, 1)
+        cv_y_img = filtering(cv_y_img, 3)
+
+    cv_ycbcr_img[:, :, 0] = cv_y_img
+    cv_rgb_img = transform_ycbcr_to_rgb_cv(cv_ycbcr_img)
+    show_image(cv_rgb_img)
+    print(f"PSNR implement_10 : {getPSNR(getMSE(rgb_img, cv_rgb_img))}")
