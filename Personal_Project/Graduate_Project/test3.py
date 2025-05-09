@@ -14,8 +14,7 @@ def move_image_data(PATH):
     return path_list
 
 def extract_csv(path_list):
-    import cv2, csv
-    import mediapipe as mp
+
 
     # MediaPipe Pose 초기화
     mp_pose = mp.solutions.pose
@@ -52,7 +51,7 @@ def extract_csv(path_list):
 
                 if frame_count % skip_interval == 0:
                     processed_frame += 1
-                    frame = cv2.resize(frame, (1028, 860))
+                    frame = cv2.resize(frame, (1920, 1280))
                     image_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                     results = pose.process(image_rgb)
 
