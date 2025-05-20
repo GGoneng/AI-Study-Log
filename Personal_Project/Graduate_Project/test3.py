@@ -3,7 +3,7 @@ import cv2
 import mediapipe as mp
 import csv
 
-def move_image_data(PATH):
+def extract_path(PATH):
     path_list = []
 
     for dirpath, _, filenames in os.walk(PATH):
@@ -35,14 +35,15 @@ def extract_csv(path_list):
     for i, path in enumerate(path_list):
         cap = cv2.VideoCapture(path)
         original_fps = cap.get(cv2.CAP_PROP_FPS)
-        skip_interval = max(1, int(original_fps / 20))  # 20fps로 맞춤
+        skip_interval = max(1, round(original_fps / 10))
 
-        with open(f'./Dataset/pose_landmarks_{i}.csv', mode='w', newline='') as file:
+
+        with open(f'./10fps_Dataset/pose_landmark_{2272 + i:04d}.csv', mode='w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(['frame', 'landmark_id', 'x', 'y', 'z'])
 
             frame_count = 0
-            processed_frame = 0
+            processed_frame = 1
 
             while cap.isOpened():
                 ret, frame = cap.read()
@@ -50,7 +51,7 @@ def extract_csv(path_list):
                     break
 
                 if frame_count % skip_interval == 0:
-                    processed_frame += 1
+                    
                     frame = cv2.resize(frame, (1920, 1280))
                     image_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                     results = pose.process(image_rgb)
@@ -60,14 +61,16 @@ def extract_csv(path_list):
                             landmark = results.pose_landmarks.landmark[idx]
                             writer.writerow([processed_frame, idx, landmark.x, landmark.y, landmark.z])
 
-                        for idx in important_landmarks:
-                            landmark = results.pose_landmarks.landmark[idx]
-                            x, y = int(landmark.x * frame.shape[1]), int(landmark.y * frame.shape[0])
-                            cv2.circle(frame, (x, y), 5, (0, 255, 0), -1)
+                        # for idx in important_landmarks:
+                        #     landmark = results.pose_landmarks.landmark[idx]
+                        #     x, y = int(landmark.x * frame.shape[1]), int(landmark.y * frame.shape[0])
+                        #     cv2.circle(frame, (x, y), 5, (0, 255, 0), -1)
+                    
+                    processed_frame += 3
 
-                    cv2.imshow('Pose with Important Landmarks', frame)
-                    if cv2.waitKey(1) & 0xFF == ord('q'):
-                        break
+                    # cv2.imshow('Pose with Important Landmarks', frame)
+                    # if cv2.waitKey(1) & 0xFF == ord('q'):
+                    #     break
 
                 frame_count += 1
 
@@ -77,7 +80,10 @@ def extract_csv(path_list):
 
 
 if __name__ == "__main__":
-    PATH = r"F:/Fall_Detection_Data/Source_Data/Video/"
-    path_list = move_image_data(PATH)
+    PATH = r"D:/041.낙상사고 위험동작 영상-센서 쌍 데이터/3.개방데이터/1.데이터/Training/01.원천데이터/TS/영상/N/N/"
+    # PATH = r"./Test_Dataset/"
+    # PATH = r"F:/Fall_Detection_Data/Source_Data/Video/"
+    path_list = extract_path(PATH)
 
+    print(path_list)
     extract_csv(path_list)
