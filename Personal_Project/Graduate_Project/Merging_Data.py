@@ -3,7 +3,7 @@ import re
 import os
 
 # CSV 파일들이 있는 폴더 경로
-folder_path = './10fps_Dataset'  # 예: './data'
+folder_path = './new_10fps_Dataset'  # 예: './data'
 csv_files = sorted(
     [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith('.csv')],
     key=lambda x: int(re.search(r'\d+', os.path.basename(x)).group())

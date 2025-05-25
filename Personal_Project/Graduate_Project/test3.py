@@ -11,7 +11,7 @@ def extract_path(PATH):
             if filename.endswith((".mp4", ".MP4")):
                 path_list.append(os.path.join(dirpath, filename))
 
-    return path_list
+    return path_list[:500]
 
 def extract_csv(path_list):
 
@@ -38,7 +38,7 @@ def extract_csv(path_list):
         skip_interval = max(1, round(original_fps / 10))
 
 
-        with open(f'./10fps_Dataset/pose_landmark_{2272 + i:04d}.csv', mode='w', newline='') as file:
+        with open(f'./10fps_Dataset/pose_landmark_{3772 + i:04d}.csv', mode='w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(['frame', 'landmark_id', 'x', 'y', 'z'])
 
@@ -80,7 +80,7 @@ def extract_csv(path_list):
 
 
 if __name__ == "__main__":
-    PATH = r"D:/041.낙상사고 위험동작 영상-센서 쌍 데이터/3.개방데이터/1.데이터/Training/01.원천데이터/TS/영상/N/N/"
+    PATH = r"D:/041.낙상사고 위험동작 영상-센서 쌍 데이터/3.개방데이터/1.데이터/Training/01.원천데이터/TS/영상/Y/FY/"
     # PATH = r"./Test_Dataset/"
     # PATH = r"F:/Fall_Detection_Data/Source_Data/Video/"
     path_list = extract_path(PATH)
