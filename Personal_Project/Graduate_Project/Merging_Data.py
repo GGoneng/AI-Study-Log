@@ -3,7 +3,7 @@ import re
 import os
 
 # CSV 파일들이 있는 폴더 경로
-folder_path = './new_10fps_Dataset'  # 예: './data'
+folder_path = './new_10fps_Dataset3'  # 예: './data'
 csv_files = sorted(
     [os.path.join(folder_path, f) for f in os.listdir(folder_path) if f.endswith('.csv')],
     key=lambda x: int(re.search(r'\d+', os.path.basename(x)).group())
@@ -13,6 +13,7 @@ df_list = []
 
 for idx, file in enumerate(csv_files):
     df = pd.read_csv(file)
+    df.dropna(inplace = True)
     df['source_index'] = idx  # 각 파일에 고유 인덱스 부여
     df_list.append(df)
 
@@ -20,6 +21,6 @@ for idx, file in enumerate(csv_files):
 # 병합
 merged_df = pd.concat(df_list, ignore_index=True)
 
-merged_df.to_csv("10fps_merged_data.csv", index = False)
+merged_df.to_csv("10fps_merged_data(no interpolation).csv", index = False)
 
 print(merged_df['source_index'].value_counts().sort_index())
