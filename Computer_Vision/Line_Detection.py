@@ -18,7 +18,6 @@ def capture_video(video_path):
     while cap.isOpened():
         ret, frame = cap.read()
         if not ret or frame is None:
-            print("Error!")
             break
 
         frame = cv2.resize(frame, (640, 480))
@@ -34,7 +33,7 @@ def show_video(video):
     for frame in video:
         cv2.imshow("Line Detecting", frame)
         
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+        if cv2.waitKey(40) & 0xFF == ord('q'):
             break
     
     cv2.destroyAllWindows()
@@ -48,24 +47,29 @@ def detect_canny_line(y_frames):
 
     return canny_frames
 
-def detect_hough_line(canny_frames):
+def detect_hough_line(canny_frames, frame_copy):
     hough_lines = []
 
     for idx, frame in enumerate(canny_frames):
-        lines = cv2.HoughLines(frame, 1, np.pi / 180, 230, None, 0, 0)
-        color_canny_frames = cv2.cvtColor(frame, cv2.COLOR_GRAY2BGR)    
+        lines = cv2.HoughLines(frame, 1, np.pi / 180, 120, None, 0, 0)
 
         if lines is not None:
             for i in range(0, len(lines)):
                 rho = lines[i][0][0]
                 theta = lines[i][0][1]
+
+                if ((theta > np.pi / 3) and (theta <  2 * np.pi / 3)):
+                    continue
+
                 a = math.cos(theta)
                 b = math.sin(theta)
                 x0 = a * rho
                 y0 = b * rho
                 pt1 = (int(x0 + 1000*(-b)), int(y0 + 1000*(a)))
                 pt2 = (int(x0 - 1000*(-b)), int(y0 - 1000*(a)))
-                hough_lines.append(cv2.line(color_canny_frames, pt1, pt2, (0,0,255), 3, cv2.LINE_AA))
+                cv2.line(frame_copy[idx], pt1, pt2, (0, 0, 255), 3, cv2.LINE_AA)
+
+        hough_lines.append(frame_copy[idx])
     
     return hough_lines
         
@@ -74,5 +78,5 @@ if __name__ == "__main__":
 
     y_frames, frame_copy = capture_video(DATA_PATH)
     canny_frames = detect_canny_line(y_frames)
-    hough_lines = detect_hough_line(canny_frames)
+    hough_lines = detect_hough_line(canny_frames, frame_copy)
     show_video(hough_lines)
