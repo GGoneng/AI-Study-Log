@@ -13,23 +13,22 @@ import math
 def capture_video(video_path):
     cap = cv2.VideoCapture(video_path)
     y_frames = []
+    frame_copy = []
 
     while cap.isOpened():
         ret, frame = cap.read()
-        if not ret:
-            print("Error!")
-            break
-        if frame is None:
+        if not ret or frame is None:
             print("Error!")
             break
 
         frame = cv2.resize(frame, (640, 480))
+        frame_copy.append(frame.copy())
         ycbcr = cv2.cvtColor(frame, cv2.COLOR_RGB2YCrCb)
 
         y_frames.append(ycbcr[:, :, 0])
     
     cap.release()
-    return y_frames
+    return y_frames, frame_copy
 
 def show_video(video):
     for frame in video:
@@ -49,12 +48,13 @@ def detect_canny_line(y_frames):
 
     return canny_frames
 
-def detect_hough_line(canny_frames, y_frames):
+def detect_hough_line(canny_frames):
     hough_lines = []
 
     for idx, frame in enumerate(canny_frames):
-        lines = cv2.HoughLines(frame, 1, np.pi / 180, 150, None, 0, 0)
-    
+        lines = cv2.HoughLines(frame, 1, np.pi / 180, 230, None, 0, 0)
+        color_canny_frames = cv2.cvtColor(frame, cv2.COLOR_GRAY2BGR)    
+
         if lines is not None:
             for i in range(0, len(lines)):
                 rho = lines[i][0][0]
@@ -65,21 +65,14 @@ def detect_hough_line(canny_frames, y_frames):
                 y0 = b * rho
                 pt1 = (int(x0 + 1000*(-b)), int(y0 + 1000*(a)))
                 pt2 = (int(x0 - 1000*(-b)), int(y0 - 1000*(a)))
-                hough_lines.append(cv2.line(y_frames[idx], pt1, pt2, (0,0,255), 3, cv2.LINE_AA))
+                hough_lines.append(cv2.line(color_canny_frames, pt1, pt2, (0,0,255), 3, cv2.LINE_AA))
     
     return hough_lines
         
-        # linesP = cv2.HoughLinesP(frame, 1, np.pi / 180, 50, None, 50, 10)
-        
-        # if linesP is not None:
-        #     for i in range(0, len(linesP)):
-        #         l = linesP[i][0]
-        #         cv2.line(cdstP, (l[0], l[1]), (l[2], l[3]), (0,0,255), 3, cv2.LINE_AA)
-
 if __name__ == "__main__":
     DATA_PATH = r"./Data/test_video.mp4"
 
-    y_frames = capture_video(DATA_PATH)
+    y_frames, frame_copy = capture_video(DATA_PATH)
     canny_frames = detect_canny_line(y_frames)
-    hough_lines = detect_hough_line(canny_frames, y_frames)
+    hough_lines = detect_hough_line(canny_frames)
     show_video(hough_lines)
