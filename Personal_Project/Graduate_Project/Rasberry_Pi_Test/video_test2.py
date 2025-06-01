@@ -6,10 +6,13 @@ import pandas as pd
 import numpy as np
 from collections import deque
 import winsound
+import threading
 
 fall_detect_model = torch.jit.load("../Final_model/model_script.pt")
 
 MAX_FRAMES_LEN = 300
+
+lock = threading.Lock()
 
 # MediaPipe Pose 초기화
 mp_pose = mp.solutions.pose
@@ -42,48 +45,60 @@ for frame in range(1, MAX_FRAMES_LEN + 1):
 
 test_df = pd.DataFrame(df_data, columns = ["frame", "landmark_id", "x", "y", "z"])
 
-# 웹캠에서 영상 받기
-cap = cv2.VideoCapture(0)  # 기본 카메라 사용
-cap.set(cv2.CAP_PROP_FRAME_WIDTH, 480)
-cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 360)
+def pose_tracking():
+    # 웹캠에서 영상 받기
+    cap = cv2.VideoCapture(0)  # 기본 카메라 사용
+    if not cap.isOpened():
+        print("카메라 열기 실패")
+        exit()
 
-start_time = time.time()
-predict_time = start_time
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 480)
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 360)
 
-while cap.isOpened():
-    ret, frame = cap.read()
-    if not ret:
-        break
-    
-    current_time = time.time()  
-    elapsed = current_time - start_time
-    predict_elapsed = current_time - predict_time
+    start_time = time.time()
 
-    if elapsed >= 0.1:
-        start_time = current_time
-        # MediaPipe에 넣기 위해 RGB로 변환
-        image_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        results = pose.process(image_rgb)
+    while cap.isOpened():
+        ret, frame = cap.read()
+        if not ret:
+            print("프레임을 읽지 못했습니다.")
+            break
+        
+        current_time = time.time()  
+        elapsed = current_time - start_time
 
-        # 관절 데이터 추출 및 표시
-        if results.pose_landmarks:
-            for idx in important_landmarks:
-                landmark = results.pose_landmarks.landmark[idx]
-                x, y = int(landmark.x * frame.shape[1]), int(landmark.y * frame.shape[0])
-                cv2.circle(frame, (x, y), 5, (0, 255, 0), -1)
+        if elapsed >= 0.1:
+            start_time = current_time
+            # MediaPipe에 넣기 위해 RGB로 변환
+            image_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            results = pose.process(image_rgb)
 
-        if results.pose_landmarks:
-            for idx in important_landmarks:
-                landmark = results.pose_landmarks.landmark[idx]
-                window.append((landmark.x, landmark.y, landmark.z))
+            if results.pose_landmarks:
+                for idx in important_landmarks:
+                    landmark = results.pose_landmarks.landmark[idx]
+                    window.append((landmark.x, landmark.y, landmark.z))
+                    
+                    x, y = int(landmark.x * frame.shape[1]), int(landmark.y * frame.shape[0])
+                    cv2.circle(frame, (x, y), 5, (0, 255, 0), -1)
 
         cv2.imshow('Real-Time Pose Landmarks', frame)
 
         # Q 누르면 종료
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
+
+    cap.release()
+    cv2.destroyAllWindows()
+
+def fall_detecting():
+    global output
     
-    if predict_elapsed >= 5:
+    while True:
+        time.sleep(5)
+
+        with lock:
+            if len(window) < 13 * 50:
+                continue
+    
         index_list = []
         j = 1
 
@@ -123,10 +138,11 @@ while cap.isOpened():
             break
         print(output)
 
-        predict_time = current_time
+pose_thread = threading.Thread(target = pose_tracking)
+detect_thread = threading.Thread(target = fall_detecting)
 
+pose_thread.start()
+detect_thread.start()
 
-cap.release()
-cv2.destroyAllWindows()
-
-# (x1, x2), (x2, y2), (x3, y3) E가 최소화 되는 직선의 방정식 구하기기
+pose_thread.join()
+detect_thread.join()
