@@ -14,6 +14,8 @@ MAX_FRAMES_LEN = 300
 
 lock = threading.Lock()
 
+stop_event = threading.Event()
+
 # MediaPipe Pose 초기화
 mp_pose = mp.solutions.pose
 pose = mp_pose.Pose(
@@ -85,12 +87,19 @@ def pose_tracking():
         # Q 누르면 종료
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
-
+        
+        if output == 1:
+            stop_event.set()
+            break
+        
     cap.release()
     cv2.destroyAllWindows()
 
+
 def fall_detecting():
     global output
+    
+    output = 0
     
     while True:
         time.sleep(5)
@@ -133,10 +142,13 @@ def fall_detecting():
         output = torch.sigmoid(fall_detect_model(X_tensor))
         output = (output > 0.5).int()
         
+        print(output)
+
         if output == 1:
             winsound.Beep(440, 1000)
+            stop_event.set()
             break
-        print(output)
+        
 
 pose_thread = threading.Thread(target = pose_tracking)
 detect_thread = threading.Thread(target = fall_detecting)
