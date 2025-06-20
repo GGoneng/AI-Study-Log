@@ -38,7 +38,7 @@ class LSTMModel(nn.Module):
 
         return logits
 
-class LSTMAutoEncoderModel(nn.Module):
+class GRUAutoEncoderModel(nn.Module):
     def __init__(self, input_size, latent_dim, n_layers):
         super().__init__()
 
@@ -111,7 +111,7 @@ def load_electric_model(model_file_path):
     n_layers = 2
     DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-    electric_lstm_model = LSTMAutoEncoderModel(input_size = input_size, latent_dim = latent_dim, 
+    electric_lstm_model = GRUAutoEncoderModel(input_size = input_size, latent_dim = latent_dim, 
                              n_layers = n_layers).to(DEVICE)
     
     electric_lstm_model.load_state_dict(torch.load(model_file_path, map_location = torch.device(DEVICE), weights_only = True))

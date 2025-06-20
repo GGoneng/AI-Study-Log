@@ -1,16 +1,39 @@
+# -----------------------------------------------------------------------------------
+# 파일명       : GRUAutoEncoderModule.py
+# 설명         : AutoEncoder 모델 학습을 위한 패키지                
+# 작성자       : 이민하
+# 작성일       : 2024-12-06
+# 
+# 사용 모듈    :
+# - os                               # 경로 관리
+# - torch, torch.nn                  # PyTorch 모델 구축 및 연산
+# - torch.utils.data                 # 데이터셋 처리
+# - sklearn.preprocessing            # 데이터 정규화 및 스케일링
+# - torchmetrics.regression          # 회귀 모델 평가 지표 계산
+# -----------------------------------------------------------------------------------
+# >> 주요 기능
+# - 
+#
+#
+# >> 업데이트 내역
+# [2024-12-06] MLP 구조의 Vanilla AutoEncoder 모델 학습
+# [2024-12-07] VAE AutoEncoder 모델 학습 (성능 저하)
+# [2024-12-08] Recurrent AutoEncoder 모델 학습 (성능 저하)
+# [2024-12-09] GRU AutoEncoder 모델 학습
+# -----------------------------------------------------------------------------------
+
+
 import os
+
 import torch
 import torch.nn as nn
-import matplotlib.pyplot as plt
-import pickle
-import pandas as pd
-import torch.nn.functional as F
-from torch.utils.data import Dataset, DataLoader
-from sklearn.model_selection import train_test_split
+from torch.utils.data import Dataset
+
 from sklearn.preprocessing import MinMaxScaler, RobustScaler
-import torch.optim as optim
-import torch.optim.lr_scheduler as lr_scheduler
-from torchmetrics.regression import R2Score, MeanAbsoluteError, MeanAbsolutePercentageError, MeanSquaredError
+
+from torchmetrics.regression import MeanSquaredError
+
+
 
 class CustomDataset(Dataset):
     def __init__(self, featureDF):
@@ -27,7 +50,7 @@ class CustomDataset(Dataset):
         return featureTS, featureTS       
     
 
-class LSTMAutoEncoderModel(nn.Module):
+class GRUAutoEncoderModel(nn.Module):
     def __init__(self, input_size, latent_dim, n_layers):
         super().__init__()
 
@@ -74,7 +97,7 @@ def testing(featureDF, targetDF, model, DEVICE):
     
     with torch.no_grad():
         decoder = model(featureTS)
-        loss_val = MeanAbsoluteError()(decoder, targetTS)
+        loss_val = MeanSquaredError()(decoder, targetTS)
 
     return loss_val
 
