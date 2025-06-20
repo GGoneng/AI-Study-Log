@@ -100,7 +100,7 @@ def fall_detecting():
     global output
     
     output = 0
-    
+
     while True:
         time.sleep(5)
 
