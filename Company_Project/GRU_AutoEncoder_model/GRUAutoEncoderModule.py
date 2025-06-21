@@ -1,6 +1,6 @@
 # -----------------------------------------------------------------------------------
 # 파일명       : GRUAutoEncoderModule.py
-# 설명         : AutoEncoder 모델 학습을 위한 패키지                
+# 설명         : AutoEncoder 모델 학습을 위한 모듈              
 # 작성자       : 이민하
 # 작성일       : 2024-12-06
 # 
@@ -12,29 +12,35 @@
 # - torchmetrics.regression          # 회귀 모델 평가 지표 계산
 # -----------------------------------------------------------------------------------
 # >> 주요 기능
-# - 
+# - 모델의 학습과 평가를 위한 모듈
 #
 #
 # >> 업데이트 내역
-# [2024-12-06] MLP 구조의 Vanilla AutoEncoder 모델 학습
-# [2024-12-07] VAE AutoEncoder 모델 학습 (성능 저하)
-# [2024-12-08] Recurrent AutoEncoder 모델 학습 (성능 저하)
-# [2024-12-09] GRU AutoEncoder 모델 학습
+# [2024-12-06] MLP 구조의 Vanilla AutoEncoder 모델 클래스 및 학습, 평가 함수 생성
+# [2024-12-07] VAE AutoEncoder 모델 클래스 및 학습, 평가 함수 생성 (성능 저하)
+# [2024-12-08] Recurrent AutoEncoder 모델 클래스 및 학습, 평가 함수 생성 (성능 저하)
+# [2024-12-09] GRU AutoEncoder 모델 클래스 및 학습, 평가 함수 생성
+#              Custom Loss 생성
 # -----------------------------------------------------------------------------------
 
-
+# 경로 관리
 import os
 
+# PyTorch 모델 구축 및 연산
 import torch
 import torch.nn as nn
+
+# 데이터셋 처리
 from torch.utils.data import Dataset
 
+# 데이터 정규화 및 스케일링
 from sklearn.preprocessing import MinMaxScaler, RobustScaler
 
+# 회귀 모델 평가 지표 계산
 from torchmetrics.regression import MeanSquaredError
 
 
-
+# 모델 연산을 위한 데
 class CustomDataset(Dataset):
     def __init__(self, featureDF):
         self.featureDF = featureDF
