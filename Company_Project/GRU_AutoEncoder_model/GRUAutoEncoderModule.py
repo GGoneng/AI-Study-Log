@@ -128,7 +128,8 @@ def training(model, trainDL, optimizer, penalty, threshold,
     # Early Stopping을 위한 변수
     BREAK_CNT_LOSS = 0
     BREAK_CNT_SCORE = 0
-
+    LIMIT_VALUE = 10
+    
     # Loss가 더 낮은 가중치 파일을 저장하기 위하여 Loss 로그를 담을 리스트
     LOSS_HISTORY = []
 
