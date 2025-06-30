@@ -227,8 +227,8 @@ def fall_detecting():
 #             data = {
 #     'messages': [
 #         {
-#             'to': '01048222070',
-#             'from': '01049653037',
+#             'to': '',
+#             'from': '',
 #             'text': 'fall detected!!!'
 #         }
 #     ]
