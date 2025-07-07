@@ -30,11 +30,26 @@ The system includes a database and web interface, and I was responsible for desi
 
 ```bash
 .
-├── data/                   # Dataset or data pipeline scripts
-├── models/                 # Model architecture and training scripts
-├── scripts/                # Training / evaluation / inference scripts
-├── utils/                  # Utility functions
-├── results/                # Outputs like graphs, logs, videos
-├── MyWEB/ (opt)            # Frontend or demo web interface
-├── requirements.txt        # Python dependencies
-└── README.md               # Project documentation
+├── GRU_AutoEncoder_model/     # Final model using GRU-based AutoEncoder
+│   ├── GRUAutoEncoderModule.py     # Module containing functions for training
+│   └── GRU_AutoEncoder.ipynb       # Notebook for training and evaluation              
+├── LSTM_Model/                # Initial LSTM-based model
+│   ├── Data_Preprocesssing.ipynb   # Data Preprocessing
+│   ├── Graph.ipynb                 # Visualization of Data Pattern
+│   ├── LSTM_model.ipynb            # Notebook for training and evaluation 
+│   └── [...]                
+├── MyWEB/                     # Web interface
+│   ├── models/                     # Pretrained models
+│   ├── static/                     # Static files
+│   ├── templates/                  # HTML templates for Flask rendering
+│   └── __init__.py                 # Flask app initialization
+└── [...]               
+```
+
+<br><br>
+## 💡Install Dependency
+
+```bash
+pip install -r requirements.txt
+```
+
