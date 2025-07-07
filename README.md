@@ -31,6 +31,8 @@
 │   ├── Fall_Detection.ipynb
 │   └── [...] 
 ├── Personal_Project/          # Personal projects (self-initiated experiments)
+│   ├── Stock_Predict
+│   │   └── [...]
 │
 ├── Contest/                   # Competitions and AI challenges
 ├── Computer_Vision/           # Experiments related to computer vision
@@ -47,5 +49,5 @@
 ├── EX_PY06/                   
 ├── EX_SQL/                    
 ├── EX_TORCH_DL/               
-├── EX_WEB/                    
+└── EX_WEB/                    
 
