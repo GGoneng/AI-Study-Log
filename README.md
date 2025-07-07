@@ -2,7 +2,7 @@
 
 
 <br><br>
-## Overview
+## 📖 Overview
 - This repository is mostly stored with AI development using Python.
 - I summarized the study contents and projects.
 - Folders prefixed with `EX_` contain **study materials**, **code examples**, or **experimental scripts** used for learning and exploration purposes.
