@@ -18,12 +18,11 @@ A functional prototype was also implemented and deployed on a Raspberry Pi for r
 
 | Category        | Tools / Frameworks                |
 |----------------|-----------------------------------|
-| OS              | Windows 11 HOME                  |
-| Language        | Python 3.x, HTML5, CSS3, JavaScript(ES6) |
-| Libraries       | torch, sklearn, matplotlib, flask     |
-| Environment     | Jupyter Notebook / VSCode / DBeaver   |
-| RDBMS           | MariaDB                               |
-| Hardware        | GPU                                   |
+| OS              | Windows 11 HOME, Raspberry PI OS |
+| Language        | Python 3.x                       |
+| Libraries       | torch, sklearn, mediapipe, picamera2, opencv |
+| Environment     | Jupyter Notebook / VSCode |
+| Hardware        | GPU, Raspberry PI                |
 
 
 <br><br>
@@ -31,20 +30,18 @@ A functional prototype was also implemented and deployed on a Raspberry Pi for r
 
 ```bash
 .
-├── GRU_AutoEncoder_model/     # Final model using GRU-based AutoEncoder
-│   ├── GRUAutoEncoderModule.py     # Module containing functions for training
-│   └── GRU_AutoEncoder.ipynb       # Notebook for training and evaluation              
-├── LSTM_Model/                # Initial LSTM-based model
-│   ├── Data_Preprocesssing.ipynb   # Data Preprocessing
-│   ├── Graph.ipynb                 # Visualization of Data Pattern
-│   ├── LSTM_model.ipynb            # Notebook for training and evaluation 
-│   └── [...]                
-├── MyWEB/                     # Web interface
-│   ├── models/                     # Pretrained models
-│   ├── static/                     # Static files
-│   ├── templates/                  # HTML templates for Flask rendering
-│   └── __init__.py                 # Flask app initialization
-└── [...]               
+├── Final_model/                    # TorchScript model 
+├── Raspberry_Pi_Test/              # Raspberry PI translation Prototype
+|
+|   # Preprocessing
+├── Data_Preprocessing.ipynb        # Data Preprocessing
+├── Extract_skeleton.py             # Extract skeleton landmarks from video frames
+├── Labeling.ipynb                  # Labeling for fall detection
+├── Merging_Data.py                 # Merge multiple datasets
+|
+|   # Model Training
+├── Fall_Detection.ipynb            # Notebook for training and evaluation
+└── [...]
 ```
 
 <br><br>
