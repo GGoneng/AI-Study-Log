@@ -2,7 +2,7 @@
 
 
 <br><br>
-## Overview
+## 📖 Overview
 - This repository is mostly stored with AI development using Python.
 - I summarized the study contents and projects.
 - Folders prefixed with `EX_` contain **study materials**, **code examples**, or **experimental scripts** used for learning and exploration purposes.
@@ -31,11 +31,13 @@
 │   ├── Fall_Detection.ipynb
 │   └── [...] 
 ├── Personal_Project/          # Personal projects (self-initiated experiments)
+│   ├── Stock_Predict
+│   │   └── [...]
 │
 ├── Contest/                   # Competitions and AI challenges
 ├── Computer_Vision/           # Experiments related to computer vision
 ├── YOLO_Pose_Test/            # YOLO-based pose estimation experiments
-|
+│
 ├── EX_CV/                     
 ├── EX_CRAWLING/               
 ├── EX_FLASK/                  
@@ -47,5 +49,5 @@
 ├── EX_PY06/                   
 ├── EX_SQL/                    
 ├── EX_TORCH_DL/               
-├── EX_WEB/                    
+└── EX_WEB/                    
 
