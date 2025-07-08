@@ -1,15 +1,16 @@
 # 📌 Project Title
 
-> **Fall Detection System**
+> ### **Fall Detection System**
 
 
 
 <br><br>
 ## 📖 Overview
 
-This project aims to detect potential solitary deaths of elderly people living alone by analyzing remote metering data (water and electricity).  
-We first experimented with an LSTM model, but later adopted a GRU-based Autoencoder for better performance.  
-The system includes a database and web interface, and I was responsible for designing the machine learning model.
+This system is designed to rapidly detect falls, especially among the elderly population, and immediately notify caregivers to enable prompt response and intervention.  
+Unlike typical vision-based approaches, it detects falls **without any wearable sensors**, using only a camera module.
+The system extracts skeleton keypoints and treats them as time-series data—similar to gyroscope readings—enabling fall detection through temporal analysis rather than standard image classification.  
+A functional prototype was also implemented and deployed on a Raspberry Pi for real-world demonstration.
 
 
 <br><br>
