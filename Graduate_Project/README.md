@@ -19,7 +19,7 @@ A functional prototype was also implemented and deployed on a Raspberry Pi for r
 | Category        | Tools / Frameworks                |
 |----------------|-----------------------------------|
 | OS              | Windows 11 HOME, Raspberry PI OS |
-| Language        | Python 3.x                       |
+| Language        | Python 3.8                       |
 | Libraries       | torch, sklearn, mediapipe, picamera2, opencv |
 | Environment     | Jupyter Notebook / VSCode |
 | Hardware        | GPU, Raspberry PI                |
