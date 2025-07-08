@@ -18,7 +18,7 @@ The system includes a database and web interface, and I was responsible for desi
 | Category        | Tools / Frameworks                |
 |----------------|-----------------------------------|
 | OS              | Windows 11 HOME                  |
-| Language        | Python 3.x, HTML5, CSS3, JavaScript(ES6) |
+| Language        | Python 3.8, HTML5, CSS3, JavaScript(ES6) |
 | Libraries       | torch, sklearn, matplotlib, flask     |
 | Environment     | Jupyter Notebook / VSCode / DBeaver   |
 | RDBMS           | MariaDB                               |
