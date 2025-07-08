@@ -32,14 +32,14 @@ A functional prototype was also implemented and deployed on a Raspberry Pi for r
 .
 ├── Final_model/                    # TorchScript model 
 ├── Raspberry_Pi_Test/              # Raspberry PI translation Prototype
-|
-|   # Preprocessing
+│ 
+│   # Preprocessing
 ├── Data_Preprocessing.ipynb        # Data Preprocessing
 ├── Extract_skeleton.py             # Extract skeleton landmarks from video frames
 ├── Labeling.ipynb                  # Labeling for fall detection
 ├── Merging_Data.py                 # Merge multiple datasets
-|
-|   # Model Training
+│ 
+│   # Model Training
 ├── Fall_Detection.ipynb            # Notebook for training and evaluation
 └── [...]
 ```
