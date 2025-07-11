@@ -9,7 +9,7 @@
 
 This project aims to detect potential solitary deaths of elderly people living alone by analyzing remote metering data (water and electricity).  
 We first experimented with an LSTM model, but later adopted a **GRU-based Autoencoder** for better performance.  
-The system includes a database and web interface, and I was responsible for designing the machine learning model.
+Also, The system includes a database (mariaDB) and web interface (Flask).
 
 
 <br><br>
