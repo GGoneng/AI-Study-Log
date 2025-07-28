@@ -3,6 +3,10 @@
 import numpy as np
 import pandas as pd
 
+from sklearn import preprocessing
+
+from mordred import Calculator, descriptors
+
 from rdkit import Chem
 from rdkit import RDLogger
 
@@ -13,9 +17,46 @@ from rdkit.ML.Descriptors.MoleculeDescriptors import MolecularDescriptorCalculat
 
 from molfeat.trans.pretrained import PretrainedDGLTransformer
 
-TRAIN_PATH = "./data/train.csv"
-TEST_PATH = "./data/test.csv"
-SUBMISSION_PATH = "./data/sample_submission.csv"
+from tqdm import tqdm
+
+
+class scaler:
+    def __init__(self, log=False):
+        self.log = log
+        self.offset = None
+        self.scaler = None
+
+    def fit(self, y):
+        # make the values non-negative
+        self.offset = np.min([np.min(y), 0.0])
+        y = y.reshape(-1, 1) - self.offset
+
+        # scale the input data
+        if self.log:
+            y = np.log10(y + 1.0)
+
+        self.scaler = preprocessing.StandardScaler().fit(y)
+
+    def transform(self, y):
+        y = y.reshape(-1, 1) - self.offset
+
+        # scale the input data
+        if self.log:
+            y = np.log10(y + 1.0)
+
+        y_scale = self.scaler.transform(y)
+
+        return y_scale
+
+    def inverse_transform(self, y_scale):
+        y = self.scaler.inverse_transform(y_scale)
+
+        if self.log:
+            y = 10.0**y - 1.0
+
+        y = y + self.offset
+
+        return y
 
 
 def avalon_fingerprint(molecule, n_bits = 1024):
@@ -72,41 +113,52 @@ def rdkit_features(molecule):
     
     return calculator.CalcDescriptors(molecule)
 
-def gin_supervised_masking(molecule):
-    transformer = PretrainedDGLTransformer(kine = "gin_supervised_masking", dtype = float)
-
+def gin_supervised_masking(transformer, molecule):
     return transformer(molecule)
 
 
 if __name__ == "__main__":
+
+    TRAIN_PATH = "./data/train.csv"
+    TEST_PATH = "./data/test.csv"
+    SUBMISSION_PATH = "./data/sample_submission.csv"
+
     RDLogger.DisableLog('rdApp.*')
 
     train_df = pd.read_csv(TRAIN_PATH)
     smiles = train_df["Canonical_Smiles"]
 
+    transformer = PretrainedDGLTransformer(kine = "gin_supervised_masking", dtype = float)
+    mordred_calc = Calculator(descriptors, ignore_3D=True)
+
+    mordred_list = []
     avalon_list = []
     morgan_list = []
-    erg_list = []
+    # erg_list = []
     rdkit_list = []
     gin_list = []
 
-    for smile in smiles:
+    for smile in tqdm(smiles):
         mol = Chem.MolFromSmiles(smile)
         
         avalon_list.append(avalon_fingerprint(mol).ToList())
         morgan_list.append(morgan_fingerprint(mol).ToList())
-        erg_list.append(erg_fingerprint(mol).tolist())
+        # erg_list.append(erg_fingerprint(mol).tolist())
         rdkit_list.append(rdkit_features(mol))
-        gin_list.append(gin_supervised_masking(mol).tolist())
+        gin_list.append(gin_supervised_masking(transformer, mol).tolist())
+        mordred_list.append(mordred_calc(mol))
 
     avalon_list = np.array(avalon_list)
     morgan_list = np.array(morgan_list)
-    erg_list = np.array(erg_list)
+    # erg_list = np.array(erg_list)
     rdkit_list = np.array(rdkit_list)
-    gin_list = np.array(gin_list)
+    gin_list = np.squeeze(np.array(gin_list), axis = 1)
+    mordred_list = np.array(mordred_list)
 
-    print(avalon_list.shape, morgan_list.shape, erg_list.shape, rdkit_list.shape, gin_list.shape)
+    print(avalon_list.shape, morgan_list.shape, rdkit_list.shape, gin_list.shape, mordred_list.shape)
 
-    combined = np.concatenate((avalon_list, morgan_list, erg_list, rdkit_list), axis = 1)
+    combined = np.concatenate((avalon_list, morgan_list, rdkit_list, gin_list, mordred_list), axis = 1)
 
     print(combined.shape)
+
+    np.savetxt("combined_features.csv", combined, delimiter=",")
