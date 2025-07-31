@@ -135,7 +135,7 @@ if __name__ == "__main__":
     avalon_list = []
     morgan_list = []
     # erg_list = []
-    rdkit_list = []
+    # rdkit_list = []
     gin_list = []
 
     for smile in tqdm(smiles):
@@ -144,20 +144,21 @@ if __name__ == "__main__":
         avalon_list.append(avalon_fingerprint(mol).ToList())
         morgan_list.append(morgan_fingerprint(mol).ToList())
         # erg_list.append(erg_fingerprint(mol).tolist())
-        rdkit_list.append(rdkit_features(mol))
+        # rdkit_list.append(rdkit_features(mol))
         gin_list.append(gin_supervised_masking(transformer, mol).tolist())
         mordred_list.append(mordred_calc(mol))
 
     avalon_list = np.array(avalon_list)
     morgan_list = np.array(morgan_list)
     # erg_list = np.array(erg_list)
-    rdkit_list = np.array(rdkit_list)
+    # rdkit_list = np.array(rdkit_list)
     gin_list = np.squeeze(np.array(gin_list), axis = 1)
     mordred_list = np.array(mordred_list)
 
-    print(avalon_list.shape, morgan_list.shape, rdkit_list.shape, gin_list.shape, mordred_list.shape)
 
-    combined = np.concatenate((avalon_list, morgan_list, rdkit_list, gin_list, mordred_list), axis = 1)
+    print(avalon_list.shape, morgan_list.shape, gin_list.shape, mordred_list.shape)
+
+    combined = np.concatenate((avalon_list, morgan_list, gin_list, mordred_list), axis = 1)
 
     print(combined.shape)
 
