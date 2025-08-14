@@ -1,4 +1,4 @@
-# Python Repository 
+# AI-Study-Log Repository 
 
 
 <br><br>
