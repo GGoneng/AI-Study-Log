@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 영화 추천 시스템 🎬</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .msg {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎬 영화 추천 시스템 🎬</h1>
+    <div>
+        <form method="POST" action="/">
+            <textarea name="keyword" rows="10" cols="40" placeholder="키워드를 입력하세요." required></textarea>
+            <br><br>
+            <input type="submit" value="영화 추천받기">
+        </form>
+    </div>
+
+    <div class="result">
+        <h2>분석 결과</h2>
+        {% if 장르 %}
+        <p><strong>장르:</strong> {{ 장르 }}</p>
+        <p><strong>등급:</strong> {{ 등급 }}</p>
+        <p><strong>국적:</strong> {{ 국적 }}</p>
+        <p><strong>유형:</strong> {{ 유형 }}</p>
+        {% else %}
+        <p>아직 분석 결과가 없습니다. 키워드를 입력하세요.</p>
+        {% endif %}
+    </div>
+
+    <div class="movie_list">
+        <h2>추천 영화 리스트</h2>
+        <table>
+            <tr>
+                <th>제목</th>
+                <th>제작국가</th>
+                <th>유형</th>
+                <th>장르</th>
+                <th>감독</th>
+                <th>관람등급</th>
+            </tr>
+
+            {% if question_list %}
+                {% for question in question_list %}
+                <tr>
+                    <td>{{ question.제목 }}</td>
+                    <td>{{ question.제작국가 }}</td>
+                    <td>{{ question.유형 }}</td>
+                    <td>{{ question.장르 }}</td>
+                    <td>{{ question.감독 }}</td>
+                    <td>{{ question.관람등급 }}</td>
+                </tr>
+                {% endfor %}
+            {% else %}
+            <tr>
+                <td class="msg" colspan="6">{{prediction}}</td>
+            </tr>
+            {% endif %}
+        </table>
+    </div>
+</body>
+</html>

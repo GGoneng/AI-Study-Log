@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>감정 분석 모델</title>
+    <style>
+        /* 입력 칸의 너비 조정 */
+        input[type="text"] {
+            width: 400px;
+            height: 200px;
+            font-size: 16px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* 폼 내부 요소들을 정렬 */
+        form {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>분석 할 영어 문장을 입력하세요</h1>
+    <form action="/cgi-bin/sentiment_analyze.py" method="post">
+        <label><input type="text" name="string" required></label><br><br>
+        <button type="submit">분석</button>
+    </form>
+</body>
+</html>
